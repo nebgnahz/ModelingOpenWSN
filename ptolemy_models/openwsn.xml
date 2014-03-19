@@ -8,7 +8,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="{140, 110}">
         </property>
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={2560, 22, 1280, 1002}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={160, 22, 934, 634}, maximized=false}">
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
     </property>
@@ -27,7 +27,7 @@
         </property>
         <property name="_location" class="ptolemy.kernel.util.Location" value="[335.0, 340.0]">
         </property>
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={2569, 28, 1280, 1002}, maximized=true}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 810}, maximized=true}">
         </property>
         <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1046, 892]">
         </property>
@@ -191,16 +191,28 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[330.0, 375.0]">
             </property>
-            <port name="in_packet" class="ptolemy.domains.modal.modal.ModalPort">
-                <property name="input"/>
-            </port>
-            <port name="out_packet" class="ptolemy.domains.modal.modal.ModalPort">
+            <port name="outPacket" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="output"/>
             </port>
-            <port name="clock" class="ptolemy.domains.modal.modal.ModalPort">
+            <port name="isrIeee154eTimer" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
             </port>
-            <port name="data_to_send" class="ptolemy.domains.modal.modal.ModalPort">
+            <port name="dataToSend" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+            </port>
+            <port name="isValidADV" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+            </port>
+            <port name="isValidPacket" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+            </port>
+            <port name="isrIeee154eNewSlot" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+            </port>
+            <port name="ieee154eStartOfFrame" class="ptolemy.domains.modal.modal.ModalPort">
+                <property name="input"/>
+            </port>
+            <port name="ieee154eEndOfFrame" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
             </port>
             <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
@@ -209,13 +221,13 @@
       <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_centerName" class="ptolemy.kernel.util.Attribute"></property><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
     </configure>
                 </property>
-                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 2560, 1414}, maximized=true}">
+                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 810}, maximized=true}">
                 </property>
                 <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 699]">
                 </property>
-                <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.7320581484315226">
+                <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.7320581484315254">
                 </property>
-                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{1075.6560138081395, 336.91851380813955}">
+                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{-71.55392441860488, 498.1214662063953}">
                 </property>
                 <property name="TsTxOffset" class="ptolemy.data.expr.Parameter" value="131">
                     <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -806,25 +818,83 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{770.0, -20.0}">
                     </property>
                 </property>
-                <port name="in_packet" class="ptolemy.domains.modal.modal.RefinementPort">
-                    <property name="input"/>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="{-95.0, 335.0}">
+                <property name="isSync" class="ptolemy.data.expr.Parameter" value="False">
+                    <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                     </property>
-                </port>
-                <port name="out_packet" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                        <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                        </property>
+                    </property>
+                    <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                        <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                    </property>
+                    <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{-220, -65}">
+                    </property>
+                </property>
+                <property name="DAGroot" class="ptolemy.data.expr.Parameter" value="False">
+                    <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                    </property>
+                    <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                        <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                        </property>
+                    </property>
+                    <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                        <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                    </property>
+                    <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                    </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-220.0, -25.0]">
+                    </property>
+                </property>
+                <port name="outPacket" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="input"/>
                     <property name="output"/>
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{1800.0, 365.0}">
                     </property>
                 </port>
-                <port name="clock" class="ptolemy.domains.modal.modal.RefinementPort">
+                <port name="isrIeee154eTimer" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="input"/>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="{-90.0, 265.0}">
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-125.0, 325.0]">
                     </property>
                 </port>
-                <port name="data_to_send" class="ptolemy.domains.modal.modal.RefinementPort">
+                <port name="dataToSend" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="input"/>
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{-100.0, 430.0}">
+                    </property>
+                </port>
+                <port name="isValidADV" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-100.0, 575.0]">
+                    </property>
+                </port>
+                <port name="isValidPacket" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-105.0, 515.0]">
+                    </property>
+                </port>
+                <port name="isrIeee154eNewSlot" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-100.0, 650.0]">
+                    </property>
+                </port>
+                <port name="ieee154eStartOfFrame" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-100.0, 715.0]">
+                    </property>
+                </port>
+                <port name="ieee154eEndOfFrame" class="ptolemy.domains.modal.modal.RefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-95.0, 770.0]">
                     </property>
                 </port>
                 <entity name="SLEEP" class="ptolemy.domains.modal.kernel.State">
@@ -844,7 +914,7 @@
                     </property>
                     <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                     </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="{215.0, 195.0}">
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[180.0, 205.0]">
                     </property>
                 </entity>
                 <entity name="SYNCRX" class="ptolemy.domains.modal.kernel.State">
@@ -854,7 +924,7 @@
                     </property>
                     <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                     </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="{350.0, 170.0}">
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[375.0, 220.0]">
                     </property>
                 </entity>
                 <entity name="SYNCPROC" class="ptolemy.domains.modal.kernel.State">
@@ -1087,31 +1157,111 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{1365.0, 695.0}">
                     </property>
                 </entity>
+                <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eNewSlot_isPresent &amp;&amp; isSync==False &amp;&amp; DAGroot==False">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.6291870477334639">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.0816919179584514">
+                    </property>
+                </relation>
+                <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eStartOfFrame_isPresent &amp;&amp; isSync==False">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.5261388634308382">
+                    </property>
+                </relation>
+                <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eEndOfFrame_isPresent &amp;&amp; isSync==False">
+                    </property>
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=True">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.4195276568094694">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.7088645645985394">
+                    </property>
+                </relation>
+                <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isValidPacket || ! isValidADV">
+                    </property>
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=False">
+                    </property>
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.9976958913678846">
+                    </property>
+                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                </relation>
+                <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.5119457265462244">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.7891724813023853">
+                    </property>
+                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                </relation>
+                <link port="SLEEP.incomingPort" relation="relation5"/>
+                <link port="SLEEP.outgoingPort" relation="relation"/>
+                <link port="SYNCLISTEN.incomingPort" relation="relation"/>
+                <link port="SYNCLISTEN.incomingPort" relation="relation4"/>
+                <link port="SYNCLISTEN.outgoingPort" relation="relation2"/>
+                <link port="SYNCRX.incomingPort" relation="relation2"/>
+                <link port="SYNCRX.outgoingPort" relation="relation3"/>
+                <link port="SYNCPROC.incomingPort" relation="relation3"/>
+                <link port="SYNCPROC.outgoingPort" relation="relation4"/>
+                <link port="SYNCPROC.outgoingPort" relation="relation5"/>
             </entity>
-            <relation name="in_packetRelation" class="ptolemy.actor.TypedIORelation">
+            <relation name="outPacketRelation" class="ptolemy.actor.TypedIORelation">
                 <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                 </property>
             </relation>
-            <relation name="out_packetRelation" class="ptolemy.actor.TypedIORelation">
+            <relation name="isrIeee154eTimerRelation" class="ptolemy.actor.TypedIORelation">
                 <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                 </property>
             </relation>
-            <relation name="clockRelation" class="ptolemy.actor.TypedIORelation">
+            <relation name="dataToSendRelation" class="ptolemy.actor.TypedIORelation">
                 <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                 </property>
             </relation>
-            <relation name="data_to_sendRelation" class="ptolemy.actor.TypedIORelation">
+            <relation name="isValidADVRelation" class="ptolemy.actor.TypedIORelation">
                 <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                 </property>
             </relation>
-            <link port="in_packet" relation="in_packetRelation"/>
-            <link port="out_packet" relation="out_packetRelation"/>
-            <link port="clock" relation="clockRelation"/>
-            <link port="data_to_send" relation="data_to_sendRelation"/>
-            <link port="_Controller.in_packet" relation="in_packetRelation"/>
-            <link port="_Controller.out_packet" relation="out_packetRelation"/>
-            <link port="_Controller.clock" relation="clockRelation"/>
-            <link port="_Controller.data_to_send" relation="data_to_sendRelation"/>
+            <relation name="isValidPacketRelation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="isrIeee154eNewSlotRelation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="ieee154eStartOfFrameRelation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <relation name="ieee154eEndOfFrameRelation" class="ptolemy.actor.TypedIORelation">
+                <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                </property>
+            </relation>
+            <link port="outPacket" relation="outPacketRelation"/>
+            <link port="isrIeee154eTimer" relation="isrIeee154eTimerRelation"/>
+            <link port="dataToSend" relation="dataToSendRelation"/>
+            <link port="isValidADV" relation="isValidADVRelation"/>
+            <link port="isValidPacket" relation="isValidPacketRelation"/>
+            <link port="isrIeee154eNewSlot" relation="isrIeee154eNewSlotRelation"/>
+            <link port="ieee154eStartOfFrame" relation="ieee154eStartOfFrameRelation"/>
+            <link port="ieee154eEndOfFrame" relation="ieee154eEndOfFrameRelation"/>
+            <link port="_Controller.outPacket" relation="outPacketRelation"/>
+            <link port="_Controller.isrIeee154eTimer" relation="isrIeee154eTimerRelation"/>
+            <link port="_Controller.dataToSend" relation="dataToSendRelation"/>
+            <link port="_Controller.isValidADV" relation="isValidADVRelation"/>
+            <link port="_Controller.isValidPacket" relation="isValidPacketRelation"/>
+            <link port="_Controller.isrIeee154eNewSlot" relation="isrIeee154eNewSlotRelation"/>
+            <link port="_Controller.ieee154eStartOfFrame" relation="ieee154eStartOfFrameRelation"/>
+            <link port="_Controller.ieee154eEndOfFrame" relation="ieee154eEndOfFrameRelation"/>
         </entity>
         <entity name="Schedule" class="ptolemy.domains.modal.modal.ModalModel">
             <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
@@ -1246,8 +1396,6 @@
                     </property>
                 </port>
                 <entity name="OFF" class="ptolemy.domains.modal.kernel.State">
-                    <property name="refinementName" class="ptolemy.kernel.util.StringAttribute">
-                    </property>
                     <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
                     </property>
                     <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
@@ -1435,13 +1583,9 @@
             <link port="_Controller.slotStart" relation="slotStartRelation"/>
             <link port="_Controller.slotClock" relation="slotClockRelation"/>
         </entity>
-        <relation name="relation2" class="ptolemy.actor.TypedIORelation">
-        </relation>
         <relation name="relation" class="ptolemy.actor.TypedIORelation">
         </relation>
-        <link port="in_channel" relation="relation2"/>
         <link port="out_channel" relation="relation"/>
-        <link port="tx-rx.in_packet" relation="relation2"/>
-        <link port="tx-rx.out_packet" relation="relation"/>
+        <link port="tx-rx.outPacket" relation="relation"/>
     </entity>
 </entity>
