@@ -29,11 +29,11 @@
         </property>
         <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 810}, maximized=true}">
         </property>
-        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1046, 892]">
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 700]">
         </property>
         <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
         </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{530.0, 443.181640625}">
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{610.0, 347.181640625}">
         </property>
         <property name="PORT_TsSlotDuration" class="ptolemy.data.expr.Parameter" value="245">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -189,37 +189,57 @@
         <entity name="tx-rx" class="ptolemy.domains.modal.modal.ModalModel">
             <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[330.0, 375.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[355.0, 365.0]">
             </property>
             <port name="outPacket" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="output"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <port name="isrIeee154eTimer" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <port name="dataToSend" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <port name="isValidADV" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <port name="isValidPacket" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <port name="isrIeee154eNewSlot" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <port name="ieee154eStartOfFrame" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <port name="ieee154eEndOfFrame" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <port name="cellType" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <port name="dataToSendIsBroadcastOrMulticast" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
             </port>
             <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
                 <property name="_library" class="ptolemy.moml.LibraryAttribute">
@@ -233,7 +253,7 @@
                 </property>
                 <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.7320581484315263">
                 </property>
-                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{1473.4078760901166, 593.6638717296513}">
+                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{382.02357376453506, 542.5052325581396}">
                 </property>
                 <property name="TsTxOffset" class="ptolemy.data.expr.Parameter" value="131">
                     <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -2205,7 +2225,11 @@
         </entity>
         <relation name="relation" class="ptolemy.actor.TypedIORelation">
         </relation>
+        <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        </relation>
         <link port="out_channel" relation="relation"/>
         <link port="tx-rx.outPacket" relation="relation"/>
+        <link port="tx-rx.cellType" relation="relation2"/>
+        <link port="Schedule.CellType" relation="relation2"/>
     </entity>
 </entity>
