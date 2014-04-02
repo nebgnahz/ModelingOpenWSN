@@ -25,15 +25,15 @@
             <property name="_location" class="ptolemy.kernel.util.Location" value="[70.0, 35.0]">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[335.0, 340.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[290.0, 315.0]">
         </property>
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 810}, maximized=true}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 812}, maximized=true}">
         </property>
-        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 700]">
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 702]">
         </property>
         <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
         </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{610.0, 347.181640625}">
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{610.0, 348.181640625}">
         </property>
         <property name="PORT_TsSlotDuration" class="ptolemy.data.expr.Parameter" value="245">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -189,7 +189,7 @@
         <entity name="tx-rx" class="ptolemy.domains.modal.modal.ModalModel">
             <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[355.0, 365.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[400.0, 370.0]">
             </property>
             <port name="outPacket" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="output"/>
@@ -247,7 +247,7 @@
       <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_centerName" class="ptolemy.kernel.util.Attribute"></property><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
     </configure>
                 </property>
-                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 810}, maximized=true}">
+                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 812}, maximized=true}">
                 </property>
                 <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 699]">
                 </property>
@@ -1906,7 +1906,7 @@
         <entity name="Schedule" class="ptolemy.domains.modal.modal.ModalModel">
             <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[190.0, 240.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[145.0, 240.0]">
             </property>
             <port name="CellType" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="output"/>
