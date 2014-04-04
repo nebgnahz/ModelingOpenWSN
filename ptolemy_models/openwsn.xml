@@ -8,7 +8,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="{140, 110}">
         </property>
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-1680, 22, 1680, 1028}, maximized=true}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 801}, maximized=true}">
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
     </property>
@@ -27,7 +27,7 @@
         </property>
         <property name="_location" class="ptolemy.kernel.util.Location" value="[290.0, 315.0]">
         </property>
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-1515, 86, 1440, 801}, maximized=true}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 801}, maximized=true}">
         </property>
         <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 702]">
         </property>
@@ -254,13 +254,13 @@
       <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_centerName" class="ptolemy.kernel.util.Attribute"></property><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
     </configure>
                 </property>
-                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-1680, 22, 1680, 1028}, maximized=true}">
+                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 801}, maximized=true}">
                 </property>
-                <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1446, 917]">
+                <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 690]">
                 </property>
-                <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.29985101759755484">
+                <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.7320581484315309">
                 </property>
-                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{419.93720021802164, 1208.3688226744196}">
+                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{156.52661700581416, 201.21071039244202}">
                 </property>
                 <property name="TsTxOffset" class="ptolemy.data.expr.Parameter" value="131">
                     <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -1044,46 +1044,6 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[-170.0, 355.0]">
                     </property>
                 </entity>
-                <entity name="SYNCLISTEN" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-335.0, 60.0]">
-                    </property>
-                </entity>
-                <entity name="SYNCRX" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-100.0, 75.0]">
-                    </property>
-                </entity>
-                <entity name="SYNCPROC" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[30.0, -170.0]">
-                    </property>
-                </entity>
-                <entity name="TXDATAPREPARE" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[355.0, 540.0]">
-                    </property>
-                </entity>
                 <entity name="RXDATAOFFSET" class="ptolemy.domains.modal.kernel.State">
                     <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
                     </property>
@@ -1092,26 +1052,6 @@
                     <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                     </property>
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[-705.0, 675.0]">
-                    </property>
-                </entity>
-                <entity name="RXACKLISTEN" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1310.0, 100.0]">
-                    </property>
-                </entity>
-                <entity name="TXDATA" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1050.0, 415.0]">
                     </property>
                 </entity>
                 <entity name="RXDATAPREPARE" class="ptolemy.domains.modal.kernel.State">
@@ -1124,26 +1064,6 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[-440.0, 640.0]">
                     </property>
                 </entity>
-                <entity name="TXPROC" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1230.0, -75.0]">
-                    </property>
-                </entity>
-                <entity name="RXACK" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1300.0, 25.0]">
-                    </property>
-                </entity>
                 <entity name="RXDATAREADY" class="ptolemy.domains.modal.kernel.State">
                     <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
                     </property>
@@ -1152,16 +1072,6 @@
                     <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                     </property>
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[-680.0, 795.0]">
-                    </property>
-                </entity>
-                <entity name="RXACKREADY" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1325.0, 180.0]">
                     </property>
                 </entity>
                 <entity name="RXDATALISTEN" class="ptolemy.domains.modal.kernel.State">
@@ -1174,26 +1084,6 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[-425.0, 715.0]">
                     </property>
                 </entity>
-                <entity name="TRXDATAREADY" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[580.0, 495.0]">
-                    </property>
-                </entity>
-                <entity name="RXACKPREPARE" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1380.0, 275.0]">
-                    </property>
-                </entity>
                 <entity name="RXDATA" class="ptolemy.domains.modal.kernel.State">
                     <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
                     </property>
@@ -1202,26 +1092,6 @@
                     <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                     </property>
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[-450.0, 930.0]">
-                    </property>
-                </entity>
-                <entity name="RXACKOFFSET" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[1320.0, 375.0]">
-                    </property>
-                </entity>
-                <entity name="TXDATADELAY" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[765.0, 450.0]">
                     </property>
                 </entity>
                 <entity name="TXACKREADY" class="ptolemy.domains.modal.kernel.State">
@@ -1284,16 +1154,6 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[810.0, 1210.0]">
                     </property>
                 </entity>
-                <entity name="TXDATAOFFSET" class="ptolemy.domains.modal.kernel.State">
-                    <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 515.0]">
-                    </property>
-                </entity>
                 <entity name="init" class="ptolemy.domains.modal.kernel.State">
                     <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
                     </property>
@@ -1304,52 +1164,26 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{-440, 265}">
                     </property>
                 </entity>
-                <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eNewSlot_isPresent &amp;&amp; isSync==False &amp;&amp; DAGroot==False">
+                <entity name="synchronization" class="ptolemy.domains.modal.kernel.State">
+                    <property name="refinementName" class="ptolemy.kernel.util.StringAttribute" value="synchronization">
                     </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.6291870477334639">
+                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.0816919179584514">
+                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                     </property>
-                </relation>
-                <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eStartOfFrame_isPresent &amp;&amp; isSync==False">
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-265.0, 75.0]">
                     </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                </entity>
+                <entity name="transmission" class="ptolemy.domains.modal.kernel.State">
+                    <property name="refinementName" class="ptolemy.kernel.util.StringAttribute" value="transmission">
                     </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.5261388634308382">
+                    <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
-                </relation>
-                <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eEndOfFrame_isPresent &amp;&amp; isSync==False">
+                    <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                     </property>
-                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=True; deSyncTimeout = DESYNCTIMEOUT">
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[160.0, 205.0]">
                     </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.4195276568094694">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.7088645645985394">
-                    </property>
-                </relation>
-                <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isValidPacket || ! isValidADV">
-                    </property>
-                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=False">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.9976958913678846">
-                    </property>
-                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
-                    </property>
-                </relation>
-                <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.5119457265462244">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.7891724813023853">
-                    </property>
-                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
-                    </property>
-                </relation>
+                </entity>
                 <relation name="relation7" class="ptolemy.domains.modal.kernel.Transition">
                     <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp; deSyncTimeout == 0 &amp;&amp; isrIeee154eNewSlot_isPresent">
                     </property>
@@ -1377,21 +1211,15 @@
                     </property>
                     <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.21757905969113628">
                     </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.23007308987451838">
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.6001578194924095">
                     </property>
                 </relation>
                 <relation name="relation8" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_TX &amp;&amp; dataToSend_isPresent &amp;&amp; dataToSend_isPresent">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_TX &amp;&amp; isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_TX &amp;&amp; dataToSend_isPresent &amp;&amp; dataToSend_isPresent">
                     </property>
                     <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.37582451254172444">
                     </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.3352573141964114">
-                    </property>
-                </relation>
-                <relation name="relation10" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.2730990944497797">
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.6009219466102992">
                     </property>
                 </relation>
                 <relation name="relation11" class="ptolemy.domains.modal.kernel.Transition">
@@ -1407,131 +1235,7 @@
                     </property>
                     <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
                     </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.0193614339538957">
-                    </property>
-                </relation>
-                <relation name="relation13" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="here you set the frequency, load the packet, and turn on the radio (and you should also set the timer DURATION_tt2)">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.23389950709917343">
-                    </property>
-                </relation>
-                <relation name="relation14" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.05333984270878116">
-                    </property>
-                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
-                    </property>
-                </relation>
-                <relation name="relation15" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="here you set the timer DURATION_tt3 and tell the radio to start transmitting">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.1493720837884907">
-                    </property>
-                </relation>
-                <relation name="relation16" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="when receive a frame, you HAVE TO cancel timer tt3 and set timer DURATION_tt4">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eStartOfFrame_isPresent">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.1155932109097518">
-                    </property>
-                </relation>
-                <relation name="relation17" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="when the timer tt3 goes off, if nothing else happened">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isrIeee154eStartOfFrame_isPresent">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.23197481399199177">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.8999319089909297">
-                    </property>
-                </relation>
-                <relation name="relation18" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="when timer tt4 goes off and you have't finished to send the packet-&gt; ERROR">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isrIeee154eEndOfFrame_isPresent">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.39339964422554974">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.9592230757029134">
-                    </property>
-                </relation>
-                <relation name="relation19" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="here you have to cancel timer tt4">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; ! dataToSendIsBroadcastOrMulticast">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.012739428023408148">
-                    </property>
-                </relation>
-                <relation name="relation20" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if it is not synchronized anymore">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == False &amp;&amp; isrIeee154eEndOfFrame_isPresent">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.29448884640842776">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.9611133097515627">
-                    </property>
-                </relation>
-                <relation name="relation21" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="successfully sent a packet; cancel any timer">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="dataToSendIsBroadcastOrMulticast">
-                    </property>
-                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="outPacket = true">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.4865868159765455">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.9934666811156396">
-                    </property>
-                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
-                    </property>
-                </relation>
-                <relation name="relation22" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="here you set the timer DURATION_tt5 and tell the radio to start transmitting. Turn on radio in rx mode schedule DURATION_tt6">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! dataToSendIsBroadcastOrMulticast">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.07974276923632244">
-                    </property>
-                </relation>
-                <relation name="relation23" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.527758348395849">
-                    </property>
-                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
-                    </property>
-                </relation>
-                <relation name="relation24" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="DURATION_tt6 goes off, start listen to the radio; schedule DURATION_tt7">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.21834897915568438">
-                    </property>
-                </relation>
-                <relation name="relation25" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if timer DURATION_tt7 goes off, there is an error... check COMPONENT_RES_TO_IEEE802154E;">
-                    </property>
-                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="failure= l2_retriesLeft==0 ? true : absent">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.370044230992271">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.0423914828121346">
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.6003094255271635">
                     </property>
                 </relation>
                 <relation name="relation26" class="ptolemy.domains.modal.kernel.Transition">
@@ -1544,72 +1248,6 @@
                     <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
                     </property>
                     <property name="preemptive" class="ptolemy.data.expr.Parameter" value="false">
-                    </property>
-                </relation>
-                <relation name="relation27" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer; schedule DURATION_tt8">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eStartOfFrame_isPresent">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.4407067286132529">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.08072659843572595">
-                    </property>
-                </relation>
-                <relation name="relation28" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if DURATION_tt8 goes off cancel timers, no ack, abort">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.5974441473162272">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.041400748708697">
-                    </property>
-                </relation>
-                <relation name="relation29" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if receive ack before DURATION_tt8 goes off; turn off the radio, capture time.">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eEndOfFrame_isPresent">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.49317957664852113">
-                    </property>
-                </relation>
-                <relation name="relation30" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="error">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isAckReceived_isPresent">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.0297826577453">
-                    </property>
-                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
-                    </property>
-                </relation>
-                <relation name="relation31" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="take ownership of the packet (? COMPONENT_IEEE802154E)">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isAckReceived_isPresent &amp;&amp; isValidPacket">
-                    </property>
-                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="outPacket = true">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.7882466511519466">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.0269986090878147">
-                    </property>
-                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
-                    </property>
-                </relation>
-                <relation name="relation32" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="annotation" class="ptolemy.data.expr.StringParameter" value="take ownership of the packet (? COMPONENT_IEEE802154E)">
-                    </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isAckReceived_isPresent &amp;&amp; ! isValidPacket">
-                    </property>
-                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.7242646086909822">
-                    </property>
-                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.027082048989979">
-                    </property>
-                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
                     </property>
                 </relation>
                 <relation name="relation33" class="ptolemy.domains.modal.kernel.Transition">
@@ -1696,8 +1334,6 @@
                     <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer, turn off radio; take ownership of the packet... here SET DURATION_rt5">
                     </property>
                     <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eEndOfFrame_isPresent &amp;&amp; dataReceived_isPresent &amp;&amp; isValidPacket &amp;&amp; ackRequested_isPresent">
-                    </property>
-                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute">
                     </property>
                     <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
                     </property>
@@ -1810,18 +1446,53 @@
                     <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
                     </property>
                 </relation>
-                <link port="SLEEP.incomingPort" relation="relation5"/>
+                <relation name="relation10" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.2334696450636753">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.4788155538998187">
+                    </property>
+                    <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="false">
+                        <display name="default"/>
+                    </property>
+                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                    <property name="termination" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                </relation>
+                <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.356194490192345">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.6085487736239026">
+                    </property>
+                    <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                        <display name="default"/>
+                    </property>
+                    <property name="history" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                </relation>
+                <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.2018352578891194">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="4.242988610725802">
+                    </property>
+                    <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="true">
+                        <display name="default"/>
+                    </property>
+                    <property name="history" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                </relation>
+                <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
+                    <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                    </property>
+                    <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.651006890952675">
+                    </property>
+                    <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                    <property name="termination" class="ptolemy.data.expr.Parameter" value="true">
+                    </property>
+                </relation>
                 <link port="SLEEP.incomingPort" relation="relation7"/>
-                <link port="SLEEP.incomingPort" relation="relation17"/>
-                <link port="SLEEP.incomingPort" relation="relation18"/>
-                <link port="SLEEP.incomingPort" relation="relation20"/>
-                <link port="SLEEP.incomingPort" relation="relation21"/>
-                <link port="SLEEP.incomingPort" relation="relation25"/>
                 <link port="SLEEP.incomingPort" relation="relation26"/>
-                <link port="SLEEP.incomingPort" relation="relation28"/>
-                <link port="SLEEP.incomingPort" relation="relation30"/>
-                <link port="SLEEP.incomingPort" relation="relation31"/>
-                <link port="SLEEP.incomingPort" relation="relation32"/>
                 <link port="SLEEP.incomingPort" relation="relation36"/>
                 <link port="SLEEP.incomingPort" relation="relation39"/>
                 <link port="SLEEP.incomingPort" relation="relation41"/>
@@ -1830,68 +1501,32 @@
                 <link port="SLEEP.incomingPort" relation="relation49"/>
                 <link port="SLEEP.incomingPort" relation="relation51"/>
                 <link port="SLEEP.incomingPort" relation="relation53"/>
-                <link port="SLEEP.outgoingPort" relation="relation"/>
+                <link port="SLEEP.incomingPort" relation="relation10"/>
+                <link port="SLEEP.incomingPort" relation="relation3"/>
                 <link port="SLEEP.outgoingPort" relation="relation7"/>
                 <link port="SLEEP.outgoingPort" relation="relation6"/>
                 <link port="SLEEP.outgoingPort" relation="relation9"/>
                 <link port="SLEEP.outgoingPort" relation="relation8"/>
-                <link port="SLEEP.outgoingPort" relation="relation10"/>
                 <link port="SLEEP.outgoingPort" relation="relation11"/>
                 <link port="SLEEP.outgoingPort" relation="relation12"/>
-                <link port="SYNCLISTEN.incomingPort" relation="relation"/>
-                <link port="SYNCLISTEN.incomingPort" relation="relation4"/>
-                <link port="SYNCLISTEN.outgoingPort" relation="relation2"/>
-                <link port="SYNCRX.incomingPort" relation="relation2"/>
-                <link port="SYNCRX.outgoingPort" relation="relation3"/>
-                <link port="SYNCPROC.incomingPort" relation="relation3"/>
-                <link port="SYNCPROC.outgoingPort" relation="relation4"/>
-                <link port="SYNCPROC.outgoingPort" relation="relation5"/>
-                <link port="TXDATAPREPARE.incomingPort" relation="relation13"/>
-                <link port="TXDATAPREPARE.outgoingPort" relation="relation14"/>
                 <link port="RXDATAOFFSET.incomingPort" relation="relation6"/>
                 <link port="RXDATAOFFSET.incomingPort" relation="relation11"/>
                 <link port="RXDATAOFFSET.incomingPort" relation="relation12"/>
                 <link port="RXDATAOFFSET.outgoingPort" relation="relation33"/>
-                <link port="RXACKLISTEN.incomingPort" relation="relation24"/>
-                <link port="RXACKLISTEN.outgoingPort" relation="relation25"/>
-                <link port="RXACKLISTEN.outgoingPort" relation="relation27"/>
-                <link port="TXDATA.incomingPort" relation="relation16"/>
-                <link port="TXDATA.outgoingPort" relation="relation18"/>
-                <link port="TXDATA.outgoingPort" relation="relation19"/>
-                <link port="TXDATA.outgoingPort" relation="relation20"/>
                 <link port="RXDATAPREPARE.incomingPort" relation="relation33"/>
                 <link port="RXDATAPREPARE.outgoingPort" relation="relation34"/>
-                <link port="TXPROC.incomingPort" relation="relation29"/>
-                <link port="TXPROC.outgoingPort" relation="relation30"/>
-                <link port="TXPROC.outgoingPort" relation="relation31"/>
-                <link port="TXPROC.outgoingPort" relation="relation32"/>
-                <link port="RXACK.incomingPort" relation="relation27"/>
-                <link port="RXACK.outgoingPort" relation="relation28"/>
-                <link port="RXACK.outgoingPort" relation="relation29"/>
                 <link port="RXDATAREADY.incomingPort" relation="relation34"/>
                 <link port="RXDATAREADY.outgoingPort" relation="relation35"/>
                 <link port="RXDATAREADY.outgoingPort" relation="relation38"/>
-                <link port="RXACKREADY.incomingPort" relation="relation23"/>
-                <link port="RXACKREADY.outgoingPort" relation="relation24"/>
                 <link port="RXDATALISTEN.incomingPort" relation="relation35"/>
                 <link port="RXDATALISTEN.outgoingPort" relation="relation36"/>
                 <link port="RXDATALISTEN.outgoingPort" relation="relation37"/>
-                <link port="TRXDATAREADY.incomingPort" relation="relation14"/>
-                <link port="TRXDATAREADY.outgoingPort" relation="relation15"/>
-                <link port="RXACKPREPARE.incomingPort" relation="relation22"/>
-                <link port="RXACKPREPARE.outgoingPort" relation="relation23"/>
                 <link port="RXDATA.incomingPort" relation="relation37"/>
                 <link port="RXDATA.incomingPort" relation="relation38"/>
                 <link port="RXDATA.outgoingPort" relation="relation39"/>
                 <link port="RXDATA.outgoingPort" relation="relation40"/>
                 <link port="RXDATA.outgoingPort" relation="relation42"/>
                 <link port="RXDATA.outgoingPort" relation="relation43"/>
-                <link port="RXACKOFFSET.incomingPort" relation="relation19"/>
-                <link port="RXACKOFFSET.outgoingPort" relation="relation21"/>
-                <link port="RXACKOFFSET.outgoingPort" relation="relation22"/>
-                <link port="TXDATADELAY.incomingPort" relation="relation15"/>
-                <link port="TXDATADELAY.outgoingPort" relation="relation16"/>
-                <link port="TXDATADELAY.outgoingPort" relation="relation17"/>
                 <link port="TXACKREADY.incomingPort" relation="relation47"/>
                 <link port="TXACKREADY.outgoingPort" relation="relation48"/>
                 <link port="TXACKDELAY.incomingPort" relation="relation48"/>
@@ -1911,11 +1546,15 @@
                 <link port="TXACKOFFSET.outgoingPort" relation="relation45"/>
                 <link port="RXPROC.incomingPort" relation="relation52"/>
                 <link port="RXPROC.outgoingPort" relation="relation53"/>
-                <link port="TXDATAOFFSET.incomingPort" relation="relation8"/>
-                <link port="TXDATAOFFSET.incomingPort" relation="relation9"/>
-                <link port="TXDATAOFFSET.incomingPort" relation="relation10"/>
-                <link port="TXDATAOFFSET.outgoingPort" relation="relation13"/>
                 <link port="init.outgoingPort" relation="relation26"/>
+                <link port="synchronization.incomingPort" relation="relation"/>
+                <link port="synchronization.outgoingPort" relation="relation10"/>
+                <link port="synchronization.outgoingPort" relation="relation"/>
+                <link port="transmission.incomingPort" relation="relation8"/>
+                <link port="transmission.incomingPort" relation="relation9"/>
+                <link port="transmission.incomingPort" relation="relation2"/>
+                <link port="transmission.outgoingPort" relation="relation2"/>
+                <link port="transmission.outgoingPort" relation="relation3"/>
             </entity>
             <entity name="decreaseDeSyncTimeout" class="ptolemy.domains.modal.modal.Refinement">
                 <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={177, 124, 934, 634}, maximized=false}">
@@ -1924,7 +1563,11 @@
                 </property>
                 <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
                 </property>
-                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{202.0, 554.89453125}">
+                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{228.46720377604166, 520.8394639756945}">
+                </property>
+                <property name="SR Director" class="ptolemy.domains.sr.kernel.SRDirector">
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{230, 310}">
+                    </property>
                 </property>
                 <port name="isrIeee154eTimer" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="input"/>
@@ -1963,21 +1606,33 @@
                 </port>
                 <port name="cellType" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 200.0}">
+                    </property>
                 </port>
                 <port name="dataToSendIsBroadcastOrMulticast" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 240.0}">
+                    </property>
                 </port>
                 <port name="outPacket" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="output"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{580.0, 200.0}">
+                    </property>
                 </port>
                 <port name="failure" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="output"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{580.0, 240.0}">
+                    </property>
                 </port>
                 <port name="isAckReceived" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 280.0}">
+                    </property>
                 </port>
                 <port name="dataReceived" class="ptolemy.domains.modal.modal.RefinementPort">
                     <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 320.0}">
+                    </property>
                 </port>
                 <entity name="IsPresent" class="ptolemy.actor.lib.logic.IsPresent">
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[110.0, 650.0]">
@@ -2302,6 +1957,906 @@
                 <link port="When.control" relation="relation5"/>
                 <link port="SetVariable.input" relation="relation8"/>
             </entity>
+            <entity name="synchronization" class="ptolemy.domains.modal.modal.ModalRefinement">
+                <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
+                </property>
+                <port name="isrIeee154eTimer" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1225.0, 375.0]">
+                    </property>
+                </port>
+                <port name="dataToSend" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 480.0]">
+                    </property>
+                </port>
+                <port name="isValidADV" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 625.0]">
+                    </property>
+                </port>
+                <port name="isValidPacket" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1205.0, 565.0]">
+                    </property>
+                </port>
+                <port name="isrIeee154eNewSlot" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 700.0]">
+                    </property>
+                </port>
+                <port name="ieee154eStartOfFrame" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 765.0]">
+                    </property>
+                </port>
+                <port name="ieee154eEndOfFrame" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1195.0, 820.0]">
+                    </property>
+                </port>
+                <port name="cellType" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 870.0]">
+                    </property>
+                </port>
+                <port name="dataToSendIsBroadcastOrMulticast" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1210.0, 520.0]">
+                    </property>
+                </port>
+                <port name="outPacket" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="output"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[2050.0, 615.0]">
+                    </property>
+                </port>
+                <port name="failure" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="output"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[2050.0, 705.0]">
+                    </property>
+                </port>
+                <port name="isAckReceived" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 930.0]">
+                    </property>
+                </port>
+                <port name="dataReceived" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1195.0, 1005.0]">
+                    </property>
+                </port>
+                <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
+                    <property name="_library" class="ptolemy.moml.LibraryAttribute">
+                        <configure>
+            <entity name="state library" class="ptolemy.kernel.CompositeEntity">
+              <input source="ptolemy/configs/basicUtilities.xml"></input>
+              <entity name="state" class="ptolemy.domains.modal.kernel.State">
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property>
+              </entity>
+            </entity>
+          </configure>
+                    </property>
+                    <port name="isrIeee154eTimer" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 215.0]">
+                        </property>
+                    </port>
+                    <port name="dataToSend" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 255.0]">
+                        </property>
+                    </port>
+                    <port name="isValidADV" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 295.0]">
+                        </property>
+                    </port>
+                    <port name="isValidPacket" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 335.0]">
+                        </property>
+                    </port>
+                    <port name="isrIeee154eNewSlot" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 375.0]">
+                        </property>
+                    </port>
+                    <port name="ieee154eStartOfFrame" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 415.0]">
+                        </property>
+                    </port>
+                    <port name="ieee154eEndOfFrame" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 455.0]">
+                        </property>
+                    </port>
+                    <port name="cellType" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 495.0]">
+                        </property>
+                    </port>
+                    <port name="dataToSendIsBroadcastOrMulticast" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 535.0]">
+                        </property>
+                    </port>
+                    <port name="outPacket" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="output"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[910.0, 375.0]">
+                        </property>
+                    </port>
+                    <port name="failure" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="output"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[950.0, 375.0]">
+                        </property>
+                    </port>
+                    <port name="isAckReceived" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 575.0]">
+                        </property>
+                    </port>
+                    <port name="dataReceived" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-230.0, 615.0]">
+                        </property>
+                    </port>
+                    <entity name="SYNCLISTEN" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[191.61620325168187, 424.06459632935366]">
+                        </property>
+                    </entity>
+                    <entity name="SYNCRX" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[486.61620325168184, 469.06459632935355]">
+                        </property>
+                    </entity>
+                    <entity name="SYNCPROC" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[556.6162032516817, 194.0645963293537]">
+                        </property>
+                    </entity>
+                    <entity name="SLEEP" class="ptolemy.domains.modal.kernel.State">
+                        <property name="refinementName" class="ptolemy.kernel.util.StringAttribute">
+                        </property>
+                        <property name="isFinalState" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="{710, 450}">
+                        </property>
+                    </entity>
+                    <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eStartOfFrame_isPresent &amp;&amp; isSync==False">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.5261388634308382">
+                        </property>
+                    </relation>
+                    <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eEndOfFrame_isPresent &amp;&amp; isSync==False">
+                        </property>
+                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=True; deSyncTimeout = DESYNCTIMEOUT">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.4195276568094694">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.7088645645985394">
+                        </property>
+                    </relation>
+                    <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isValidPacket || ! isValidADV">
+                        </property>
+                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=False">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.9976958913678846">
+                        </property>
+                        <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                    </relation>
+                    <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.0646340545790962">
+                        </property>
+                        <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                    </relation>
+                    <link port="SYNCLISTEN.incomingPort" relation="relation3"/>
+                    <link port="SYNCLISTEN.outgoingPort" relation="relation"/>
+                    <link port="SYNCRX.incomingPort" relation="relation"/>
+                    <link port="SYNCRX.outgoingPort" relation="relation2"/>
+                    <link port="SYNCPROC.incomingPort" relation="relation2"/>
+                    <link port="SYNCPROC.outgoingPort" relation="relation3"/>
+                    <link port="SYNCPROC.outgoingPort" relation="relation4"/>
+                    <link port="SLEEP.incomingPort" relation="relation4"/>
+                </entity>
+                <relation name="isrIeee154eTimerRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="dataToSendRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="isValidADVRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="isValidPacketRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="isrIeee154eNewSlotRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="ieee154eStartOfFrameRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="ieee154eEndOfFrameRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="cellTypeRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="dataToSendIsBroadcastOrMulticastRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="outPacketRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="failureRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="isAckReceivedRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="dataReceivedRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <link port="isrIeee154eTimer" relation="isrIeee154eTimerRelation"/>
+                <link port="dataToSend" relation="dataToSendRelation"/>
+                <link port="isValidADV" relation="isValidADVRelation"/>
+                <link port="isValidPacket" relation="isValidPacketRelation"/>
+                <link port="isrIeee154eNewSlot" relation="isrIeee154eNewSlotRelation"/>
+                <link port="ieee154eStartOfFrame" relation="ieee154eStartOfFrameRelation"/>
+                <link port="ieee154eEndOfFrame" relation="ieee154eEndOfFrameRelation"/>
+                <link port="cellType" relation="cellTypeRelation"/>
+                <link port="dataToSendIsBroadcastOrMulticast" relation="dataToSendIsBroadcastOrMulticastRelation"/>
+                <link port="outPacket" relation="outPacketRelation"/>
+                <link port="failure" relation="failureRelation"/>
+                <link port="isAckReceived" relation="isAckReceivedRelation"/>
+                <link port="dataReceived" relation="dataReceivedRelation"/>
+                <link port="_Controller.isrIeee154eTimer" relation="isrIeee154eTimerRelation"/>
+                <link port="_Controller.dataToSend" relation="dataToSendRelation"/>
+                <link port="_Controller.isValidADV" relation="isValidADVRelation"/>
+                <link port="_Controller.isValidPacket" relation="isValidPacketRelation"/>
+                <link port="_Controller.isrIeee154eNewSlot" relation="isrIeee154eNewSlotRelation"/>
+                <link port="_Controller.ieee154eStartOfFrame" relation="ieee154eStartOfFrameRelation"/>
+                <link port="_Controller.ieee154eEndOfFrame" relation="ieee154eEndOfFrameRelation"/>
+                <link port="_Controller.cellType" relation="cellTypeRelation"/>
+                <link port="_Controller.dataToSendIsBroadcastOrMulticast" relation="dataToSendIsBroadcastOrMulticastRelation"/>
+                <link port="_Controller.outPacket" relation="outPacketRelation"/>
+                <link port="_Controller.failure" relation="failureRelation"/>
+                <link port="_Controller.isAckReceived" relation="isAckReceivedRelation"/>
+                <link port="_Controller.dataReceived" relation="dataReceivedRelation"/>
+            </entity>
+            <entity name="transmission" class="ptolemy.domains.modal.modal.ModalRefinement">
+                <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
+                </property>
+                <port name="isrIeee154eTimer" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1225.0, 375.0]">
+                    </property>
+                </port>
+                <port name="dataToSend" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 480.0]">
+                    </property>
+                </port>
+                <port name="isValidADV" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 625.0]">
+                    </property>
+                </port>
+                <port name="isValidPacket" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1205.0, 565.0]">
+                    </property>
+                </port>
+                <port name="isrIeee154eNewSlot" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 700.0]">
+                    </property>
+                </port>
+                <port name="ieee154eStartOfFrame" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 765.0]">
+                    </property>
+                </port>
+                <port name="ieee154eEndOfFrame" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1195.0, 820.0]">
+                    </property>
+                </port>
+                <port name="cellType" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 870.0]">
+                    </property>
+                </port>
+                <port name="dataToSendIsBroadcastOrMulticast" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1210.0, 520.0]">
+                    </property>
+                </port>
+                <port name="outPacket" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="output"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[2050.0, 615.0]">
+                    </property>
+                </port>
+                <port name="failure" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="output"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[2050.0, 705.0]">
+                    </property>
+                </port>
+                <port name="isAckReceived" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1200.0, 930.0]">
+                    </property>
+                </port>
+                <port name="dataReceived" class="ptolemy.domains.modal.modal.ModalRefinementPort">
+                    <property name="input"/>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[-1195.0, 1005.0]">
+                    </property>
+                </port>
+                <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
+                    <property name="_library" class="ptolemy.moml.LibraryAttribute">
+                        <configure>
+            <entity name="state library" class="ptolemy.kernel.CompositeEntity">
+              <input source="ptolemy/configs/basicUtilities.xml"></input>
+              <entity name="state" class="ptolemy.domains.modal.kernel.State">
+                <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property>
+              </entity>
+            </entity>
+          </configure>
+                    </property>
+                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={253, 132, 934, 635}, maximized=false}">
+                    </property>
+                    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
+                    </property>
+                    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.6400000000000008">
+                    </property>
+                    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{340.0958938953488, 683.9079396802326}">
+                    </property>
+                    <port name="isrIeee154eTimer" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 260.0]">
+                        </property>
+                    </port>
+                    <port name="dataToSend" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 300.0]">
+                        </property>
+                    </port>
+                    <port name="isValidADV" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 340.0]">
+                        </property>
+                    </port>
+                    <port name="isValidPacket" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 380.0]">
+                        </property>
+                    </port>
+                    <port name="isrIeee154eNewSlot" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 420.0]">
+                        </property>
+                    </port>
+                    <port name="ieee154eStartOfFrame" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 460.0]">
+                        </property>
+                    </port>
+                    <port name="ieee154eEndOfFrame" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 500.0]">
+                        </property>
+                    </port>
+                    <port name="cellType" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 540.0]">
+                        </property>
+                    </port>
+                    <port name="dataToSendIsBroadcastOrMulticast" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 580.0]">
+                        </property>
+                    </port>
+                    <port name="outPacket" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="output"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[1865.0, 740.0]">
+                        </property>
+                    </port>
+                    <port name="failure" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="output"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[1905.0, 740.0]">
+                        </property>
+                    </port>
+                    <port name="isAckReceived" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 620.0]">
+                        </property>
+                    </port>
+                    <port name="dataReceived" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-880.0, 660.0]">
+                        </property>
+                    </port>
+                    <entity name="SLEEP" class="ptolemy.domains.modal.kernel.State">
+                        <property name="refinementName" class="ptolemy.kernel.util.StringAttribute">
+                        </property>
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="isFinalState" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[155.0, 1035.0]">
+                        </property>
+                    </entity>
+                    <entity name="TXDATAPREPARE" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[200.0, 370.0]">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                    </entity>
+                    <entity name="RXACKLISTEN" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[540.0, 550.0]">
+                        </property>
+                    </entity>
+                    <entity name="TXDATA" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-135.0, 520.0]">
+                        </property>
+                    </entity>
+                    <entity name="TXPROC" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[795.0, 1010.0]">
+                        </property>
+                    </entity>
+                    <entity name="RXACK" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[630.0, 755.0]">
+                        </property>
+                    </entity>
+                    <entity name="RXACKREADY" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[390.0, 545.0]">
+                        </property>
+                    </entity>
+                    <entity name="TRXDATAREADY" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-50.0, 375.0]">
+                        </property>
+                    </entity>
+                    <entity name="RXACKPREPARE" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[210.0, 560.0]">
+                        </property>
+                    </entity>
+                    <entity name="RXACKOFFSET" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[45.0, 550.0]">
+                        </property>
+                    </entity>
+                    <entity name="TXDATADELAY" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[-350.0, 400.0]">
+                        </property>
+                    </entity>
+                    <entity name="TXDATAOFFSET" class="ptolemy.domains.modal.kernel.State">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                        <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 375.0]">
+                        </property>
+                    </entity>
+                    <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="here you set the frequency, load the packet, and turn on the radio (and you should also set the timer DURATION_tt2)">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.23389950709917343">
+                        </property>
+                    </relation>
+                    <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.05333984270878116">
+                        </property>
+                        <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                    </relation>
+                    <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="here you set the timer DURATION_tt3 and tell the radio to start transmitting">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.1493720837884907">
+                        </property>
+                    </relation>
+                    <relation name="relation6" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="when receive a frame, you HAVE TO cancel timer tt3 and set timer DURATION_tt4">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eStartOfFrame_isPresent">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.1155932109097518">
+                        </property>
+                    </relation>
+                    <relation name="relation7" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="when the timer tt3 goes off, if nothing else happened">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isrIeee154eStartOfFrame_isPresent">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.23197481399199177">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.8999319089909297">
+                        </property>
+                    </relation>
+                    <relation name="relation8" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="when timer tt4 goes off and you have't finished to send the packet-&gt; ERROR">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isrIeee154eEndOfFrame_isPresent">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.39339964422554974">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.9592230757029134">
+                        </property>
+                    </relation>
+                    <relation name="relation9" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="here you have to cancel timer tt4">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; ! dataToSendIsBroadcastOrMulticast">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.012739428023408148">
+                        </property>
+                    </relation>
+                    <relation name="relation10" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if it is not synchronized anymore">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == False &amp;&amp; isrIeee154eEndOfFrame_isPresent">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.29448884640842776">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.9611133097515627">
+                        </property>
+                    </relation>
+                    <relation name="relation11" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="successfully sent a packet; cancel any timer">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="dataToSendIsBroadcastOrMulticast">
+                        </property>
+                        <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="outPacket = true">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.4865868159765455">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.9934666811156396">
+                        </property>
+                        <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                    </relation>
+                    <relation name="relation12" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="here you set the timer DURATION_tt5 and tell the radio to start transmitting. Turn on radio in rx mode schedule DURATION_tt6">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! dataToSendIsBroadcastOrMulticast">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.07974276923632244">
+                        </property>
+                    </relation>
+                    <relation name="relation13" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.527758348395849">
+                        </property>
+                        <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                    </relation>
+                    <relation name="relation14" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="DURATION_tt6 goes off, start listen to the radio; schedule DURATION_tt7">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.21834897915568438">
+                        </property>
+                    </relation>
+                    <relation name="relation15" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if timer DURATION_tt7 goes off, there is an error... check COMPONENT_RES_TO_IEEE802154E;">
+                        </property>
+                        <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="failure= l2_retriesLeft==0 ? true : false">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.370044230992271">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.0423914828121346">
+                        </property>
+                    </relation>
+                    <relation name="relation16" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer; schedule DURATION_tt8">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eStartOfFrame_isPresent">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.4407067286132529">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.08072659843572595">
+                        </property>
+                    </relation>
+                    <relation name="relation17" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if DURATION_tt8 goes off cancel timers, no ack, abort">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.5974441473162272">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.041400748708697">
+                        </property>
+                    </relation>
+                    <relation name="relation18" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if receive ack before DURATION_tt8 goes off; turn off the radio, capture time.">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eEndOfFrame_isPresent">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.6480412973195635">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.0131652845409462">
+                        </property>
+                    </relation>
+                    <relation name="relation19" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="error">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isAckReceived_isPresent">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.605511343625996">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="3.0980907150203167">
+                        </property>
+                        <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                    </relation>
+                    <relation name="relation20" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="take ownership of the packet (? COMPONENT_IEEE802154E)">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isAckReceived_isPresent &amp;&amp; isValidPacket">
+                        </property>
+                        <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="outPacket = true">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.19588567077366467">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="3.0991433768514445">
+                        </property>
+                        <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                    </relation>
+                    <relation name="relation21" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="annotation" class="ptolemy.data.expr.StringParameter" value="take ownership of the packet (? COMPONENT_IEEE802154E)">
+                        </property>
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isAckReceived_isPresent &amp;&amp; ! isValidPacket">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.1609625065217135">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="3.105606266680886">
+                        </property>
+                        <property name="immediate" class="ptolemy.data.expr.Parameter" value="true">
+                        </property>
+                    </relation>
+                    <link port="SLEEP.incomingPort" relation="relation7"/>
+                    <link port="SLEEP.incomingPort" relation="relation8"/>
+                    <link port="SLEEP.incomingPort" relation="relation10"/>
+                    <link port="SLEEP.incomingPort" relation="relation11"/>
+                    <link port="SLEEP.incomingPort" relation="relation15"/>
+                    <link port="SLEEP.incomingPort" relation="relation17"/>
+                    <link port="SLEEP.incomingPort" relation="relation19"/>
+                    <link port="SLEEP.incomingPort" relation="relation20"/>
+                    <link port="SLEEP.incomingPort" relation="relation21"/>
+                    <link port="TXDATAPREPARE.incomingPort" relation="relation3"/>
+                    <link port="TXDATAPREPARE.outgoingPort" relation="relation4"/>
+                    <link port="RXACKLISTEN.incomingPort" relation="relation14"/>
+                    <link port="RXACKLISTEN.outgoingPort" relation="relation15"/>
+                    <link port="RXACKLISTEN.outgoingPort" relation="relation16"/>
+                    <link port="TXDATA.incomingPort" relation="relation6"/>
+                    <link port="TXDATA.outgoingPort" relation="relation8"/>
+                    <link port="TXDATA.outgoingPort" relation="relation9"/>
+                    <link port="TXDATA.outgoingPort" relation="relation10"/>
+                    <link port="TXPROC.incomingPort" relation="relation18"/>
+                    <link port="TXPROC.outgoingPort" relation="relation19"/>
+                    <link port="TXPROC.outgoingPort" relation="relation20"/>
+                    <link port="TXPROC.outgoingPort" relation="relation21"/>
+                    <link port="RXACK.incomingPort" relation="relation16"/>
+                    <link port="RXACK.outgoingPort" relation="relation17"/>
+                    <link port="RXACK.outgoingPort" relation="relation18"/>
+                    <link port="RXACKREADY.incomingPort" relation="relation13"/>
+                    <link port="RXACKREADY.outgoingPort" relation="relation14"/>
+                    <link port="TRXDATAREADY.incomingPort" relation="relation4"/>
+                    <link port="TRXDATAREADY.outgoingPort" relation="relation5"/>
+                    <link port="RXACKPREPARE.incomingPort" relation="relation12"/>
+                    <link port="RXACKPREPARE.outgoingPort" relation="relation13"/>
+                    <link port="RXACKOFFSET.incomingPort" relation="relation9"/>
+                    <link port="RXACKOFFSET.outgoingPort" relation="relation11"/>
+                    <link port="RXACKOFFSET.outgoingPort" relation="relation12"/>
+                    <link port="TXDATADELAY.incomingPort" relation="relation5"/>
+                    <link port="TXDATADELAY.outgoingPort" relation="relation6"/>
+                    <link port="TXDATADELAY.outgoingPort" relation="relation7"/>
+                    <link port="TXDATAOFFSET.outgoingPort" relation="relation3"/>
+                </entity>
+                <relation name="isrIeee154eTimerRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="dataToSendRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="isValidADVRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="isValidPacketRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="isrIeee154eNewSlotRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="ieee154eStartOfFrameRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="ieee154eEndOfFrameRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="cellTypeRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="dataToSendIsBroadcastOrMulticastRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="outPacketRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="failureRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="isAckReceivedRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <relation name="dataReceivedRelation" class="ptolemy.actor.TypedIORelation">
+                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+                    </property>
+                </relation>
+                <link port="isrIeee154eTimer" relation="isrIeee154eTimerRelation"/>
+                <link port="dataToSend" relation="dataToSendRelation"/>
+                <link port="isValidADV" relation="isValidADVRelation"/>
+                <link port="isValidPacket" relation="isValidPacketRelation"/>
+                <link port="isrIeee154eNewSlot" relation="isrIeee154eNewSlotRelation"/>
+                <link port="ieee154eStartOfFrame" relation="ieee154eStartOfFrameRelation"/>
+                <link port="ieee154eEndOfFrame" relation="ieee154eEndOfFrameRelation"/>
+                <link port="cellType" relation="cellTypeRelation"/>
+                <link port="dataToSendIsBroadcastOrMulticast" relation="dataToSendIsBroadcastOrMulticastRelation"/>
+                <link port="outPacket" relation="outPacketRelation"/>
+                <link port="failure" relation="failureRelation"/>
+                <link port="isAckReceived" relation="isAckReceivedRelation"/>
+                <link port="dataReceived" relation="dataReceivedRelation"/>
+                <link port="_Controller.isrIeee154eTimer" relation="isrIeee154eTimerRelation"/>
+                <link port="_Controller.dataToSend" relation="dataToSendRelation"/>
+                <link port="_Controller.isValidADV" relation="isValidADVRelation"/>
+                <link port="_Controller.isValidPacket" relation="isValidPacketRelation"/>
+                <link port="_Controller.isrIeee154eNewSlot" relation="isrIeee154eNewSlotRelation"/>
+                <link port="_Controller.ieee154eStartOfFrame" relation="ieee154eStartOfFrameRelation"/>
+                <link port="_Controller.ieee154eEndOfFrame" relation="ieee154eEndOfFrameRelation"/>
+                <link port="_Controller.cellType" relation="cellTypeRelation"/>
+                <link port="_Controller.dataToSendIsBroadcastOrMulticast" relation="dataToSendIsBroadcastOrMulticastRelation"/>
+                <link port="_Controller.outPacket" relation="outPacketRelation"/>
+                <link port="_Controller.failure" relation="failureRelation"/>
+                <link port="_Controller.isAckReceived" relation="isAckReceivedRelation"/>
+                <link port="_Controller.dataReceived" relation="dataReceivedRelation"/>
+            </entity>
             <relation name="isrIeee154eTimerRelation" class="ptolemy.actor.TypedIORelation">
                 <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                 </property>
@@ -2393,6 +2948,32 @@
             <link port="decreaseDeSyncTimeout.failure" relation="failureRelation"/>
             <link port="decreaseDeSyncTimeout.isAckReceived" relation="isAckReceivedRelation"/>
             <link port="decreaseDeSyncTimeout.dataReceived" relation="dataReceivedRelation"/>
+            <link port="synchronization.isrIeee154eTimer" relation="isrIeee154eTimerRelation"/>
+            <link port="synchronization.dataToSend" relation="dataToSendRelation"/>
+            <link port="synchronization.isValidADV" relation="isValidADVRelation"/>
+            <link port="synchronization.isValidPacket" relation="isValidPacketRelation"/>
+            <link port="synchronization.isrIeee154eNewSlot" relation="isrIeee154eNewSlotRelation"/>
+            <link port="synchronization.ieee154eStartOfFrame" relation="ieee154eStartOfFrameRelation"/>
+            <link port="synchronization.ieee154eEndOfFrame" relation="ieee154eEndOfFrameRelation"/>
+            <link port="synchronization.cellType" relation="cellTypeRelation"/>
+            <link port="synchronization.dataToSendIsBroadcastOrMulticast" relation="dataToSendIsBroadcastOrMulticastRelation"/>
+            <link port="synchronization.outPacket" relation="outPacketRelation"/>
+            <link port="synchronization.failure" relation="failureRelation"/>
+            <link port="synchronization.isAckReceived" relation="isAckReceivedRelation"/>
+            <link port="synchronization.dataReceived" relation="dataReceivedRelation"/>
+            <link port="transmission.isrIeee154eTimer" relation="isrIeee154eTimerRelation"/>
+            <link port="transmission.dataToSend" relation="dataToSendRelation"/>
+            <link port="transmission.isValidADV" relation="isValidADVRelation"/>
+            <link port="transmission.isValidPacket" relation="isValidPacketRelation"/>
+            <link port="transmission.isrIeee154eNewSlot" relation="isrIeee154eNewSlotRelation"/>
+            <link port="transmission.ieee154eStartOfFrame" relation="ieee154eStartOfFrameRelation"/>
+            <link port="transmission.ieee154eEndOfFrame" relation="ieee154eEndOfFrameRelation"/>
+            <link port="transmission.cellType" relation="cellTypeRelation"/>
+            <link port="transmission.dataToSendIsBroadcastOrMulticast" relation="dataToSendIsBroadcastOrMulticastRelation"/>
+            <link port="transmission.outPacket" relation="outPacketRelation"/>
+            <link port="transmission.failure" relation="failureRelation"/>
+            <link port="transmission.isAckReceived" relation="isAckReceivedRelation"/>
+            <link port="transmission.dataReceived" relation="dataReceivedRelation"/>
         </entity>
         <entity name="Schedule" class="ptolemy.domains.modal.modal.ModalModel">
             <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
