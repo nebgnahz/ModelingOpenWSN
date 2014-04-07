@@ -29,11 +29,11 @@
         </property>
         <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-1510, 22, 1440, 810}, maximized=true}">
         </property>
-        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1446, 918]">
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 700]">
         </property>
         <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
         </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{730.0, 456.181640625}">
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{610.0, 347.181640625}">
         </property>
         <property name="PORT_TsSlotDuration" class="ptolemy.data.expr.Parameter" value="245">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -208,7 +208,7 @@
         <entity name="tx-rx" class="ptolemy.domains.modal.modal.ModalModel">
             <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[685.0, 380.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[590.0, 385.0]">
             </property>
             <port name="isrIeee154eTimer" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="input"/>
@@ -893,7 +893,7 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[380.0, -270.0]">
                     </property>
                 </property>
-                <property name="isSync" class="ptolemy.data.expr.Parameter" value="False">
+                <property name="isSync" class="ptolemy.data.expr.Parameter" value="false">
                     <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                     </property>
                     <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -912,7 +912,7 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[-670.0, -335.0]">
                     </property>
                 </property>
-                <property name="DAGroot" class="ptolemy.data.expr.Parameter" value="False">
+                <property name="DAGroot" class="ptolemy.data.expr.Parameter" value="false">
                     <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                     </property>
                     <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -1182,9 +1182,9 @@
                     </property>
                 </entity>
                 <relation name="relation7" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp; deSyncTimeout == 0 &amp;&amp; isrIeee154eNewSlot_isPresent">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == true &amp;&amp; deSyncTimeout == 0 &amp;&amp; isrIeee154eNewSlot_isPresent">
                     </property>
-                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync = False">
+                    <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync = false">
                     </property>
                     <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.5766261639082972">
                     </property>
@@ -1196,7 +1196,7 @@
                 <relation name="relation6" class="ptolemy.domains.modal.kernel.Transition">
                     <property name="annotation" class="ptolemy.data.expr.StringParameter" value="set DURATION_rt1">
                     </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_ADV &amp;&amp; ! dataToSend_isPresent">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == true &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_ADV &amp;&amp; ! dataToSend_isPresent">
                     </property>
                     <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_rt1">
                     </property>
@@ -1210,7 +1210,7 @@
                 <relation name="relation9" class="ptolemy.domains.modal.kernel.Transition">
                     <property name="annotation" class="ptolemy.data.expr.StringParameter" value="set DURATION_tt1">
                     </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_TXRX &amp;&amp; dataToSend_isPresent">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == true &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_TXRX &amp;&amp; dataToSend_isPresent">
                     </property>
                     <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_tt1">
                     </property>
@@ -1222,7 +1222,7 @@
                 <relation name="relation8" class="ptolemy.domains.modal.kernel.Transition">
                     <property name="annotation" class="ptolemy.data.expr.StringParameter" value="set DURATION_tt1">
                     </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_TX &amp;&amp; dataToSend_isPresent">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == true &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_TX &amp;&amp; dataToSend_isPresent">
                     </property>
                     <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_tt1">
                     </property>
@@ -1234,7 +1234,7 @@
                 <relation name="relation11" class="ptolemy.domains.modal.kernel.Transition">
                     <property name="annotation" class="ptolemy.data.expr.StringParameter" value="set DURATION_rt1">
                     </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_TXRX &amp;&amp; ! dataToSend_isPresent">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == true &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_TXRX &amp;&amp; ! dataToSend_isPresent">
                     </property>
                     <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_rt1">
                     </property>
@@ -1246,7 +1246,7 @@
                 <relation name="relation12" class="ptolemy.domains.modal.kernel.Transition">
                     <property name="annotation" class="ptolemy.data.expr.StringParameter" value="set DURATION_rt1">
                     </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_RX">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == true &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_RX">
                     </property>
                     <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_rt1">
                     </property>
@@ -1268,7 +1268,7 @@
                     </property>
                 </relation>
                 <relation name="relation10" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="resetTimer=True">
+                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="resetTimer=true">
                     </property>
                     <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.2334696450636753">
                     </property>
@@ -1305,7 +1305,7 @@
                     </property>
                 </relation>
                 <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="resetTimer=True">
+                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="resetTimer=true">
                     </property>
                     <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
                     </property>
@@ -1328,7 +1328,7 @@
                     </property>
                 </relation>
                 <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
-                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="resetTimer=True">
+                    <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="resetTimer=true">
                     </property>
                     <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.3281779979466945">
                     </property>
@@ -1342,7 +1342,7 @@
                 <relation name="relation13" class="ptolemy.domains.modal.kernel.Transition">
                     <property name="annotation" class="ptolemy.data.expr.StringParameter" value="setTimer = DURATION_tt1">
                     </property>
-                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == True &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_ADV &amp;&amp; dataToSend_isPresent">
+                    <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync == true &amp;&amp;  isrIeee154eNewSlot_isPresent &amp;&amp; cellType == CELLTYPE_ADV &amp;&amp; dataToSend_isPresent">
                     </property>
                     <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_tt1">
                     </property>
@@ -2012,7 +2012,7 @@
                         </property>
                     </entity>
                     <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eStartOfFrame_isPresent &amp;&amp; isSync==False">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eStartOfFrame_isPresent &amp;&amp; isSync==false">
                         </property>
                         <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
                         </property>
@@ -2020,9 +2020,9 @@
                         </property>
                     </relation>
                     <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eEndOfFrame_isPresent &amp;&amp; isSync==False">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eEndOfFrame_isPresent &amp;&amp; isSync==false">
                         </property>
-                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=True; deSyncTimeout = DESYNCTIMEOUT">
+                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=true; deSyncTimeout = DESYNCTIMEOUT">
                         </property>
                         <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.4195276568094694">
                         </property>
@@ -2032,7 +2032,7 @@
                     <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="! isValidPacket || ! isValidADV">
                         </property>
-                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=False">
+                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="isSync=false">
                         </property>
                         <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
                         </property>
@@ -2487,7 +2487,7 @@
                     <relation name="relation6" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="when receive a frame, you HAVE TO cancel timer tt3 and set timer DURATION_tt4">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eStartOfFrame_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eStartOfFrame_isPresent">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer=DURATION_tt4">
                         </property>
@@ -2521,7 +2521,7 @@
                     <relation name="relation10" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if it is not synchronized anymore">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eTimer_isPresent &amp;&amp; isSync == False &amp;&amp; isrIeee154eEndOfFrame_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eTimer_isPresent &amp;&amp; isSync == false &amp;&amp; isrIeee154eEndOfFrame_isPresent">
                         </property>
                         <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.29448884640842776">
                         </property>
@@ -2589,7 +2589,7 @@
                     <relation name="relation16" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer; schedule DURATION_tt8">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eStartOfFrame_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eStartOfFrame_isPresent">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer=DURATION_tt8">
                         </property>
@@ -2613,7 +2613,7 @@
                     <relation name="relation18" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="if receive ack before DURATION_tt8 goes off; turn off the radio, capture time.">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eEndOfFrame_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eEndOfFrame_isPresent">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="resetTimer = true">
                         </property>
@@ -2663,7 +2663,7 @@
                     <relation name="relation9" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="here you have set tt5. turn off radio (radio_rfOff)">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eTimer_isPresent &amp;&amp; isSync==True &amp;&amp; ! dataToSendIsBroadcastOrMulticast">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eTimer_isPresent &amp;&amp; isSync==true &amp;&amp; ! dataToSendIsBroadcastOrMulticast">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_tt5">
                         </property>
@@ -2675,7 +2675,7 @@
                     <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="don't need to wait for ACK">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eTimer_isPresent &amp;&amp; isSync==True &amp;&amp; dataToSendIsBroadcastOrMulticast">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isrIeee154eTimer_isPresent &amp;&amp; isSync==true &amp;&amp; dataToSendIsBroadcastOrMulticast">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="resetTimer=true">
                         </property>
@@ -2905,7 +2905,7 @@
             <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
           </configure>
                     </property>
-                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-1558, 112, 1440, 810}, maximized=true}">
+                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 810}, maximized=true}">
                     </property>
                     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 699]">
                     </property>
@@ -3166,7 +3166,7 @@
                     <relation name="relation8" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer rt3 and capture time (also syncCapturedTime); set DURATION_rt4">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eStartOfFrame_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eStartOfFrame_isPresent">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_rt4">
                         </property>
@@ -3178,7 +3178,7 @@
                     <relation name="relation9" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer rt3 and capture time (also syncCapturedTime), set DURATION_rt4">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eStartOfFrame_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eStartOfFrame_isPresent">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_rt4">
                         </property>
@@ -3202,7 +3202,7 @@
                     <relation name="relation11" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer; turn off radio">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eEndOfFrame_isPresent &amp;&amp; ! (dataReceived_isPresent &amp;&amp; isValidPacket)">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eEndOfFrame_isPresent &amp;&amp; ! (dataReceived_isPresent &amp;&amp; isValidPacket)">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="resetTimer = true">
                         </property>
@@ -3226,7 +3226,7 @@
                     <relation name="relation13" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer, turn off radio; take ownership of the packet... here SET DURATION_rt5">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eEndOfFrame_isPresent &amp;&amp; dataReceived_isPresent &amp;&amp; isValidPacket &amp;&amp; ackRequested_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eEndOfFrame_isPresent &amp;&amp; dataReceived_isPresent &amp;&amp; isValidPacket &amp;&amp; ackRequested_isPresent">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_rt5">
                         </property>
@@ -3238,7 +3238,7 @@
                     <relation name="relation14" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer, turn off radio; take ownership of the packet... you are done. do (// synchronize to the received packet iif I'm not a DAGroot and this is my preferred parent) ">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eEndOfFrame_isPresent &amp;&amp; dataReceived_isPresent &amp;&amp; isValidPacket &amp;&amp; !ackRequested_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eEndOfFrame_isPresent &amp;&amp; dataReceived_isPresent &amp;&amp; isValidPacket &amp;&amp; !ackRequested_isPresent">
                         </property>
                         <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.061359574317129635">
                         </property>
@@ -3321,7 +3321,7 @@
                     <relation name="relation21" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer, capture time; schedule DURATION_rt8">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eStartOfFrame_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eStartOfFrame_isPresent">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="setTimer = DURATION_RT8">
                         </property>
@@ -3343,7 +3343,7 @@
                     <relation name="relation23" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="annotation" class="ptolemy.data.expr.StringParameter" value="cancel timer, capture time, synchronize with the packet and notify packet received">
                         </property>
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==True &amp;&amp; isrIeee154eEndOfFrame_isPresent ">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="isSync==true &amp;&amp; isrIeee154eEndOfFrame_isPresent ">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="outPacket=true &amp;&amp; resetTimer = true">
                         </property>
@@ -3674,7 +3674,7 @@
         <entity name="Schedule" class="ptolemy.domains.modal.modal.ModalModel">
             <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[145.0, 240.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[165.0, 240.0]">
             </property>
             <port name="CellType" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="output"/>
@@ -3697,7 +3697,7 @@
       <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_centerName" class="ptolemy.kernel.util.Attribute"></property><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
     </configure>
                 </property>
-                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 801}, maximized=true}">
+                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 810}, maximized=true}">
                 </property>
                 <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 690]">
                 </property>
