@@ -20,9 +20,9 @@
 *.mtc
 *.mtc1
 *.out
-*.pdf
+
 *.synctex.gz
 
 auto
-
+report.pdf
 .DS_Store
