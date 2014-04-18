@@ -16,11 +16,11 @@
     </property>
     <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 808}, maximized=true}">
     </property>
-    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 696]">
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 698]">
     </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.000000000000001">
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.2500000000000013">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{323.64775617732556, 198.798546511628}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{333.48090479651165, 332.4853015988372}">
     </property>
     <entity name="LimitedRangeChannel" class="ptolemy.domains.wireless.lib.LimitedRangeChannel">
         <property name="_location" class="ptolemy.kernel.util.Location" value="[370.0, 185.0]">
@@ -38,8 +38,8 @@
 "http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
 <plot>
 <title>TimedPlotter</title>
-<xRange min="0.0" max="102021.0"/>
-<yRange min="0.0" max="102022.02021875"/>
+<xRange min="56041.85589030427" max="56041.85625122968"/>
+<yRange min="56040.866007082564" max="56043.25148439266"/>
 </plot>?>
         </configure>
     </entity>
@@ -283,7 +283,7 @@
             </property>
             <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[55.0, 560.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[50.0, 635.0]">
             </property>
         </port>
         <entity name="tx-rx" class="ptolemy.domains.modal.modal.ModalModel">
@@ -2781,7 +2781,7 @@
             <entity name="state library" class="ptolemy.kernel.CompositeEntity"><input source="ptolemy/configs/basicUtilities.xml"></input><entity name="state" class="ptolemy.domains.modal.kernel.State"><property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property></entity></entity>
           </configure>
                     </property>
-                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 806}, maximized=true}">
+                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 808}, maximized=true}">
                     </property>
                     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 695]">
                     </property>
@@ -5747,7 +5747,7 @@
                 <property name="_location" class="ptolemy.kernel.util.Location" value="[255.0, 270.0]">
                 </property>
             </property>
-            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 806}, maximized=true}">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 808}, maximized=true}">
             </property>
             <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 696]">
             </property>
@@ -6270,7 +6270,7 @@
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{110, 240}">
                 </property>
             </property>
-            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 810}, maximized=true}">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 808}, maximized=true}">
             </property>
             <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 700]">
             </property>
@@ -6381,7 +6381,7 @@
         </entity>
         <entity name="CurrentTime" class="ptolemy.actor.lib.CurrentTime">
             <doc>Output the current time.</doc>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{1045, 390}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[1070.0, 635.0]">
             </property>
         </entity>
         <entity name="ADVpacketGen" class="ptolemy.actor.TypedCompositeActor">
