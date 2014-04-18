@@ -1,7 +1,9 @@
 \section{Introduction}
-We want to model the OpenWSN stack using Ptolemy II. Our goal is to provide a tool to estimate power consumption, scalability and network behavior of a WSN application in an early phase of the design process.
+We want to model the OpenWSN \cite{watteyne2012openwsn} stack using Ptolemy II \cite{davis1999overview}. Our goal is to provide a tool to estimate power consumption, scalability and network behavior of a WSN application in an early phase of the design process.
 
 Once completed, this project will provide a two-fold contribution. First, it is going to augment the building blocks available to the Ptolemy community. This means Ptolemy will be used to design applications with a clear high level semantics, while being able to evaluate lower level details and their impact once the application is deployed. Second, we are providing a tool to help the OpenWSN community in the development process.
+
+We are focusing on modeling the MAC layer of OpenWSN. This layer implements the IEEE 802.15.4e protocol standard, based on a time synchronized channel hopping technique. The peculiarity of modeling this stack layer is that each state of the protocol state machine is uniquely associated with a state of the radio. Modeling power consumption dynamics is, in this way, straightforward (we refer to \cite{vilajosana2013realistic} for details). Moreover, at this level it is possible to capture point to point communication issues and the impact of a network schedule, required by 802.15.4e. It is not possible, however, to model multi-hop communication dynamics. We will address this problem as a future challenge.
 
 %%% Local Variables: 
 %%% mode: latex
