@@ -67,7 +67,7 @@
         </property>
         <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
         </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{603.0, 348.0}">
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{603.0000000000002, 347.99999999999994}">
         </property>
         <property name="PORT_TsSlotDuration" class="ptolemy.data.expr.Parameter" value="245">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -85,7 +85,7 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[230.0, 30.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[185.0, 30.0]">
             </property>
         </property>
         <property name="PORT_maxRxDataPrepare" class="ptolemy.data.expr.Parameter" value="16">
@@ -104,7 +104,7 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[230.0, 90.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[185.0, 90.0]">
             </property>
         </property>
         <property name="PORT_maxRxAckPrepare" class="ptolemy.data.expr.Parameter" value="10">
@@ -123,7 +123,7 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{230.0, 70.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[185.0, 70.0]">
             </property>
         </property>
         <property name="PORT_maxTxDataPrepare" class="ptolemy.data.expr.Parameter" value="33">
@@ -142,7 +142,7 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[230.0, 50.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[185.0, 50.0]">
             </property>
         </property>
         <property name="PORT_delayRx" class="ptolemy.data.expr.Parameter" value="0">
@@ -161,7 +161,7 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[540.0, 75.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 65.0]">
             </property>
         </property>
         <property name="PORT_delayTx" class="ptolemy.data.expr.Parameter" value="10">
@@ -180,7 +180,7 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[540.0, 55.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 45.0]">
             </property>
         </property>
         <property name="PORT_maxTxAckPrepare" class="ptolemy.data.expr.Parameter" value="10">
@@ -199,7 +199,7 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[535.0, 35.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 25.0]">
             </property>
         </property>
         <property name="nominalClockFrequency" class="ptolemy.data.expr.Parameter" value="1/32000">
@@ -218,7 +218,7 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[790.0, 35.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 85.0]">
             </property>
         </property>
         <property name="drift" class="ptolemy.data.expr.Parameter" value="10.0 ^ (-5)">
@@ -237,7 +237,7 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[790.0, 75.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 125.0]">
             </property>
         </property>
         <property name="localClock" class="ptolemy.data.expr.Parameter" value="283731">
@@ -256,7 +256,13 @@
             </property>
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[790.0, 55.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 105.0]">
+            </property>
+        </property>
+        <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+            <property name="text" class="ptolemy.kernel.util.StringAttribute" value="There should be two INPUT ports in this actor:&#10;1, a wireless input port that receives data from 802.15.4&#10;2, a payload input from upper application layer&#10;&#10;two OUTPUT ports in this actor:&#10;1, a wireless output port that sends data to 802.15.4&#10;2, a port that delivers data to upper application layer">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[20.0, 130.0]">
             </property>
         </property>
         <port name="msgIn" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
@@ -5362,7 +5368,7 @@
         <entity name="Schedule" class="ptolemy.domains.modal.modal.ModalModel">
             <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[165.0, 240.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 325.0]">
             </property>
             <port name="CellType" class="ptolemy.domains.modal.modal.ModalPort">
                 <property name="output"/>
@@ -5770,7 +5776,7 @@
             </property>
         </entity>
         <entity name="PhisicalEmulator" class="ptolemy.actor.TypedCompositeActor">
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[285.0, 510.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{285.0, 510.0}">
             </property>
             <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{110, 240}">
@@ -6447,7 +6453,7 @@
             </property>
         </entity>
         <entity name="ADVpacketGen" class="ptolemy.actor.TypedCompositeActor">
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[410.0, 175.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{785.0, 55.0}">
             </property>
             <port name="packetToBeSent" class="ptolemy.actor.TypedIOPort">
                 <property name="output"/>
