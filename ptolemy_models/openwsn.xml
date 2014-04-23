@@ -271,7 +271,7 @@
             </property>
             <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{155.0, 495.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{155.0, 490.0}">
             </property>
         </port>
         <port name="wirelessOut" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
@@ -287,13 +287,13 @@
             <property name="_location" class="ptolemy.kernel.util.Location" value="{320.0, 485.0}">
             </property>
             <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{110, 240}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{55.0, 15.0}">
                 </property>
             </property>
             <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
                 <property name="text" class="ptolemy.kernel.util.StringAttribute" value="This actor model the reception of a packet from the radio point of view.&#10;Once a packet is received, the actor wait a certain time before to deliver it to the mac layer.&#10;Moreover, here we can check if the packet is valid or what type it is">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[420.0, 190.0]">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{-5.0, 50.0}">
                 </property>
             </property>
             <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 808}, maximized=true}">
@@ -302,11 +302,30 @@
             </property>
             <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
             </property>
-            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{590.0, 514.580078125}">
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{481.95813953488374, 196.7002452761628}">
+            </property>
+            <property name="_radioOn" class="ptolemy.data.expr.Parameter" value="false">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{140.0, -5.0}">
+                </property>
             </property>
             <port name="toMAC" class="ptolemy.actor.TypedIOPort">
                 <property name="output"/>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[915.0, 435.0]">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{470.0, 295.0}">
                 </property>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
@@ -315,80 +334,105 @@
                 <property name="output"/>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[925.0, 345.0]">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{470.0, 145.0}">
                 </property>
             </port>
             <port name="endOfFrame" class="ptolemy.actor.TypedIOPort">
                 <property name="output"/>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[930.0, 525.0]">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{470.0, 240.0}">
                 </property>
             </port>
             <port name="fromMAC" class="ptolemy.actor.TypedIOPort">
                 <property name="input"/>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[60.0, 655.0]">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{280.0, 10.0}">
                 </property>
             </port>
             <port name="toChannel" class="ptolemy.actor.TypedIOPort">
                 <property name="output"/>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[920.0, 655.0]">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{340.0, 10.0}">
                 </property>
             </port>
             <port name="fromChannel" class="ptolemy.actor.TypedIOPort">
                 <property name="input"/>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[55.0, 465.0]">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{15.0, 165.0}">
+                </property>
+            </port>
+            <port name="radioOn" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{635.0, 15.0}">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
             </port>
             <entity name="ModalModel" class="ptolemy.domains.modal.modal.ModalModel">
                 <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[425.0, 470.0]">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{335.0, 230.0}">
                 </property>
                 <port name="startOfFrame" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="output"/>
                     <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                    </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
                 </port>
                 <port name="fromChannel" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="input"/>
                     <property name="defaultValue" class="ptolemy.data.expr.Parameter">
                     </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
                 </port>
                 <port name="setTimer" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="output"/>
                     <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                    </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
                 </port>
                 <port name="timerValue" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="input"/>
                     <property name="defaultValue" class="ptolemy.data.expr.Parameter">
                     </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
                 </port>
                 <port name="timer" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="input"/>
                     <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                    </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
                 </port>
                 <port name="endOfFrame" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="output"/>
                     <property name="defaultValue" class="ptolemy.data.expr.Parameter">
                     </property>
-                </port>
-                <port name="forceIdle" class="ptolemy.domains.modal.modal.ModalPort">
-                    <property name="input"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
                 </port>
                 <port name="toMAC" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="output"/>
                     <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                    </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
+                </port>
+                <port name="radioOn" class="ptolemy.domains.modal.modal.ModalPort">
+                    <property name="input"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                    </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
                 </port>
                 <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
@@ -436,7 +480,7 @@ Then delete this annotation.</text>
                         <property name="_location" class="ptolemy.kernel.util.Location" value="[310.0, 185.0]">
                         </property>
                     </property>
-                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={253, 132, 996, 664}, maximized=false}">
+                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={222, 118, 996, 664}, maximized=false}">
                     </property>
                     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[762, 553]">
                     </property>
@@ -501,15 +545,6 @@ Then delete this annotation.</text>
                         <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                         </property>
                     </port>
-                    <port name="forceIdle" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 360.0]">
-                        </property>
-                        <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                    </port>
                     <port name="toMAC" class="ptolemy.domains.modal.modal.RefinementPort">
                         <property name="input"/>
                         <property name="output"/>
@@ -518,8 +553,15 @@ Then delete this annotation.</text>
                         <property name="_location" class="ptolemy.kernel.util.Location" value="[735.0, 395.0]">
                         </property>
                     </port>
+                    <port name="radioOn" class="ptolemy.domains.modal.modal.RefinementPort">
+                        <property name="input"/>
+                        <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="{150.0, 360.0}">
+                        </property>
+                    </port>
                     <entity name="idle" class="ptolemy.domains.modal.kernel.State">
-                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+                        <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="false">
                         </property>
                         <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
                         </property>
@@ -541,11 +583,11 @@ Then delete this annotation.</text>
                         </property>
                         <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                         </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{435, 245}">
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[435.0, 245.0]">
                         </property>
                     </entity>
                     <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="fromChannel_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="fromChannel_isPresent &amp;&amp; radioOn == true">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="startOfFrame=true; setTimer = timerValue">
                         </property>
@@ -556,16 +598,8 @@ Then delete this annotation.</text>
                         <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.25982991023190155">
                         </property>
                     </relation>
-                    <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="forceIdle_isPresent">
-                        </property>
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
-                        </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.9243636104367376">
-                        </property>
-                    </relation>
                     <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="!forceIdle_isPresent &amp;&amp; timer">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="!forceIdle_isPresent &amp;&amp; timer_isPresent &amp;&amp; radioOn == true">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="endOfFrame = true; toMAC = payload">
                         </property>
@@ -585,12 +619,20 @@ Then delete this annotation.</text>
                             <display name="default"/>
                         </property>
                     </relation>
-                    <link port="idle.incomingPort" relation="relation2"/>
+                    <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="radioOn == false">
+                        </property>
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        </property>
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.578560770104836">
+                        </property>
+                    </relation>
                     <link port="idle.incomingPort" relation="relation4"/>
+                    <link port="idle.incomingPort" relation="relation2"/>
                     <link port="idle.outgoingPort" relation="relation"/>
                     <link port="receiving.incomingPort" relation="relation"/>
-                    <link port="receiving.outgoingPort" relation="relation2"/>
                     <link port="receiving.outgoingPort" relation="relation3"/>
+                    <link port="receiving.outgoingPort" relation="relation2"/>
                     <link port="receiveDone.incomingPort" relation="relation3"/>
                     <link port="receiveDone.outgoingPort" relation="relation4"/>
                 </entity>
@@ -618,11 +660,11 @@ Then delete this annotation.</text>
                     <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                     </property>
                 </relation>
-                <relation name="forceIdleRelation" class="ptolemy.actor.TypedIORelation">
+                <relation name="toMACRelation" class="ptolemy.actor.TypedIORelation">
                     <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                     </property>
                 </relation>
-                <relation name="toMACRelation" class="ptolemy.actor.TypedIORelation">
+                <relation name="radioOnRelation" class="ptolemy.actor.TypedIORelation">
                     <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                     </property>
                 </relation>
@@ -632,21 +674,176 @@ Then delete this annotation.</text>
                 <link port="timerValue" relation="timerValueRelation"/>
                 <link port="timer" relation="timerRelation"/>
                 <link port="endOfFrame" relation="endOfFrameRelation"/>
-                <link port="forceIdle" relation="forceIdleRelation"/>
                 <link port="toMAC" relation="toMACRelation"/>
+                <link port="radioOn" relation="radioOnRelation"/>
                 <link port="_Controller.startOfFrame" relation="startOfFrameRelation"/>
                 <link port="_Controller.fromChannel" relation="fromChannelRelation"/>
                 <link port="_Controller.setTimer" relation="setTimerRelation"/>
                 <link port="_Controller.timerValue" relation="timerValueRelation"/>
                 <link port="_Controller.timer" relation="timerRelation"/>
                 <link port="_Controller.endOfFrame" relation="endOfFrameRelation"/>
-                <link port="_Controller.forceIdle" relation="forceIdleRelation"/>
                 <link port="_Controller.toMAC" relation="toMACRelation"/>
+                <link port="_Controller.radioOn" relation="radioOnRelation"/>
+            </entity>
+            <entity name="RecordDisassembler" class="ptolemy.actor.lib.RecordDisassembler">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{95.0, 145.0}">
+                </property>
+                <port name="payload" class="ptolemy.actor.TypedIOPort">
+                    <property name="output"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                    </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
+                </port>
+                <port name="length" class="ptolemy.actor.TypedIOPort">
+                    <property name="output"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                    </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
+                </port>
+            </entity>
+            <entity name="SetVariable" class="ptolemy.actor.lib.SetVariable">
+                <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="_radioOn">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                    <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
+                    </property>
+                    <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+                    </property>
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{720.0, 15.0}">
+                </property>
+            </entity>
+            <entity name="Expression" class="ptolemy.actor.lib.Expression">
+                <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="_radioOn">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                    <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
+                    </property>
+                    <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                    </property>
+                    <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
+                    </property>
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{170.0, 250.0}">
+                </property>
+            </entity>
+            <entity name="SetVariable2" class="ptolemy.actor.lib.SetVariable">
+                <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="_radioOn">
+                </property>
+                <property name="delayed" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                    <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
+                    </property>
+                    <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
+                    </property>
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{550.0, 15.0}">
+                </property>
+            </entity>
+            <entity name="Init" class="ptolemy.actor.lib.Const">
+                <property name="value" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+                <property name="firingCountLimit" class="ptolemy.data.expr.Parameter" value="1">
+                </property>
+                <doc>Create a constant sequence.</doc>
+                <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                    <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+                    </property>
+                    <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                    </property>
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{470.0, 15.0}">
+                </property>
+            </entity>
+            <entity name="MicrostepDelay" class="ptolemy.actor.lib.MicrostepDelay">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{480.0, 365.0}">
+                </property>
+                <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </entity>
+            <entity name="ResettableTimer" class="ptolemy.actor.lib.ResettableTimer">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[595.0, 365.0]">
+                </property>
+                <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
             </entity>
             <relation name="relation" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;toChannel._location&quot;,x=340.0,y=10.0}, tail={id=&quot;fromMAC._location&quot;,x=280.0,y=10.0}, points={} } }">
+                </property>
             </relation>
+            <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.fromChannel&quot;,x=335.0,y=230.0}, tail={id=&quot;RecordDisassembler.payload&quot;,x=95.0,y=145.0}, points={240.0,210.0,240.0,155.0} } }">
+                </property>
+            </relation>
+            <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.timerValue&quot;,x=335.0,y=230.0}, tail={id=&quot;RecordDisassembler.length&quot;,x=95.0,y=145.0}, points={225.0,220.0,225.0,175.0} } }">
+                </property>
+            </relation>
+            <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;fromChannel._location&quot;,x=15.0,y=165.0}, tail={id=&quot;RecordDisassembler.input&quot;,x=95.0,y=145.0}, points={} } }">
+                </property>
+            </relation>
+            <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;radioOn._location&quot;,x=635.0,y=15.0}, tail={id=&quot;SetVariable.input&quot;,x=720.0,y=15.0}, points={} } }">
+                </property>
+            </relation>
+            <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.radioOn&quot;,x=335.0,y=230.0}, tail={id=&quot;Expression.output&quot;,x=170.0,y=250.0}, points={} } }">
+                </property>
+            </relation>
+            <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SetVariable2.input&quot;,x=550.0,y=15.0}, tail={id=&quot;Init.output&quot;,x=470.0,y=15.0}, points={} } }">
+                </property>
+            </relation>
+            <relation name="relation9" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.timer&quot;,x=335.0,y=230.0}, tail={id=&quot;MicrostepDelay.output&quot;,x=480.0,y=365.0}, points={240.0,240.0,240.0,365.0} } }">
+                </property>
+            </relation>
+            <relation name="relation11" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;startOfFrame._location&quot;,x=470.0,y=145.0}, tail={id=&quot;ModalModel.startOfFrame&quot;,x=335.0,y=230.0}, points={430.0,145.0,430.0,210.0} } }">
+                </property>
+            </relation>
+            <relation name="relation12" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;endOfFrame._location&quot;,x=470.0,y=240.0}, tail={id=&quot;ModalModel.endOfFrame&quot;,x=335.0,y=230.0}, points={} } }">
+                </property>
+            </relation>
+            <relation name="relation13" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;toMAC._location&quot;,x=470.0,y=295.0}, tail={id=&quot;ModalModel.toMAC&quot;,x=335.0,y=230.0}, points={430.0,295.0,430.0,250.0} } }">
+                </property>
+            </relation>
+            <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+            </relation>
+            <relation name="relation10" class="ptolemy.actor.TypedIORelation">
+            </relation>
+            <link port="toMAC" relation="relation13"/>
+            <link port="startOfFrame" relation="relation11"/>
+            <link port="endOfFrame" relation="relation12"/>
             <link port="fromMAC" relation="relation"/>
             <link port="toChannel" relation="relation"/>
+            <link port="fromChannel" relation="relation2"/>
+            <link port="radioOn" relation="relation5"/>
+            <link port="ModalModel.startOfFrame" relation="relation11"/>
+            <link port="ModalModel.fromChannel" relation="relation3"/>
+            <link port="ModalModel.setTimer" relation="relation10"/>
+            <link port="ModalModel.timerValue" relation="relation4"/>
+            <link port="ModalModel.timer" relation="relation9"/>
+            <link port="ModalModel.endOfFrame" relation="relation12"/>
+            <link port="ModalModel.toMAC" relation="relation13"/>
+            <link port="ModalModel.radioOn" relation="relation6"/>
+            <link port="RecordDisassembler.input" relation="relation2"/>
+            <link port="RecordDisassembler.payload" relation="relation3"/>
+            <link port="RecordDisassembler.length" relation="relation4"/>
+            <link port="SetVariable.input" relation="relation5"/>
+            <link port="Expression.output" relation="relation6"/>
+            <link port="SetVariable2.input" relation="relation7"/>
+            <link port="Init.output" relation="relation7"/>
+            <link port="MicrostepDelay.input" relation="relation8"/>
+            <link port="MicrostepDelay.output" relation="relation9"/>
+            <link port="ResettableTimer.input" relation="relation10"/>
+            <link port="ResettableTimer.output" relation="relation8"/>
         </entity>
         <entity name="ApplicationLayer" class="ptolemy.actor.TypedCompositeActor">
             <property name="_location" class="ptolemy.kernel.util.Location" value="{310.0, 305.0}">
@@ -6410,8 +6607,6 @@ Then delete this annotation.</text>
             </property>
         </relation>
         <relation name="relation" class="ptolemy.actor.TypedIORelation">
-            <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;wirelessIn._location&quot;,x=155.0,y=495.0}, tail={id=&quot;PhysicalLayer.fromChannel&quot;,x=320.0,y=485.0}, points={} } }">
-            </property>
         </relation>
         <relation name="relation3" class="ptolemy.actor.TypedIORelation">
             <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;MACLayer.fromPhysical&quot;,x=100.0,y=390.0}, tail={id=&quot;PhysicalLayer.toMAC&quot;,x=320.0,y=485.0}, points={225.0,410.0,225.0,435.0,415.0,435.0,415.0,465.0} } }">
