@@ -368,13 +368,13 @@
                         <property name="_location" class="ptolemy.kernel.util.Location" value="[235.0, 120.0]">
                         </property>
                     </property>
-                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={621, 314, 1318, 811}, maximized=false}">
+                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 2560, 1414}, maximized=false}">
                     </property>
-                    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1084, 700]">
+                    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[2326, 1303]">
                     </property>
                     <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.5189003500234053">
                     </property>
-                    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{463.67011768385254, 241.3440627830829}">
+                    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{872.5185322559018, 439.84293072748363}">
                     </property>
                     <property name="timer" class="ptolemy.data.expr.Parameter" value="10">
                         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -510,9 +510,9 @@
                     <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="radioOn == false">
                         </property>
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6679631083870082">
                         </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.578560770104836">
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.8835447051425445">
                         </property>
                     </relation>
                     <link port="idle.incomingPort" relation="relation4"/>
