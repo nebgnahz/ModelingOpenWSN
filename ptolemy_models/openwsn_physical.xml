@@ -256,7 +256,7 @@
             <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
                 <property name="text" class="ptolemy.kernel.util.StringAttribute" value="This actor model the reception of a packet from the radio point of view.&#10;Once a packet is received, the actor wait a certain time before to deliver it to the mac layer.&#10;Moreover, here we can check if the packet is valid or what type it is">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{130.0, -20.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{-5.0, 45.0}">
                 </property>
             </property>
             <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1670, 1414}, maximized=true}">
@@ -269,7 +269,7 @@
             </property>
             <port name="toMAC" class="ptolemy.actor.TypedIOPort">
                 <property name="output"/>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{485.0, 310.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{455.0, 270.0}">
                 </property>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
@@ -278,27 +278,27 @@
                 <property name="output"/>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{485.0, 140.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{455.0, 135.0}">
                 </property>
             </port>
             <port name="endOfFrame" class="ptolemy.actor.TypedIOPort">
                 <property name="output"/>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{485.0, 215.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{455.0, 195.0}">
                 </property>
             </port>
             <port name="fromChannel" class="ptolemy.actor.TypedIOPort">
                 <property name="input"/>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{15.0, 280.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{15.0, 260.0}">
                 </property>
             </port>
             <entity name="ModalModel" class="ptolemy.domains.modal.modal.ModalModel">
                 <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{335.0, 290.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{320.0, 260.0}">
                 </property>
                 <port name="startOfFrame" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="output"/>
@@ -310,17 +310,7 @@
                     <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
                 </port>
-                <port name="setTimer" class="ptolemy.domains.modal.modal.ModalPort">
-                    <property name="output"/>
-                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                </port>
                 <port name="timerValue" class="ptolemy.domains.modal.modal.ModalPort">
-                    <property name="input"/>
-                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                    </property>
-                </port>
-                <port name="timer" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="input"/>
                     <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
@@ -337,8 +327,6 @@
                 </port>
                 <port name="radioOn" class="ptolemy.domains.modal.modal.ModalPort">
                     <property name="input"/>
-                    <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                    </property>
                     <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                     </property>
                 </port>
@@ -377,16 +365,35 @@
                         </property>
                         <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
                         </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[310.0, 185.0]">
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[235.0, 120.0]">
                         </property>
                     </property>
-                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={640, 22, 1280, 1414}, maximized=false}">
+                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={621, 314, 1318, 811}, maximized=false}">
                     </property>
-                    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1046, 1303]">
+                    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1084, 700]">
                     </property>
                     <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.5189003500234053">
                     </property>
-                    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{451.1610679626465, 439.84293072748363}">
+                    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{463.67011768385254, 241.3440627830829}">
+                    </property>
+                    <property name="timer" class="ptolemy.data.expr.Parameter" value="10">
+                        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                        </property>
+                        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                            </property>
+                        </property>
+                        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                            <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                        </property>
+                        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                        </property>
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[235.0, 140.0]">
+                        </property>
                     </property>
                     <port name="startOfFrame" class="ptolemy.domains.modal.modal.RefinementPort">
                         <property name="input"/>
@@ -407,16 +414,6 @@
                         <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                         </property>
                     </port>
-                    <port name="setTimer" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="output"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{735.0, 280.0}">
-                        </property>
-                        <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                    </port>
                     <port name="timerValue" class="ptolemy.domains.modal.modal.RefinementPort">
                         <property name="input"/>
                         <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
@@ -426,21 +423,12 @@
                         <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                         </property>
                     </port>
-                    <port name="timer" class="ptolemy.domains.modal.modal.RefinementPort">
-                        <property name="input"/>
-                        <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 320.0]">
-                        </property>
-                        <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                    </port>
                     <port name="endOfFrame" class="ptolemy.domains.modal.modal.RefinementPort">
                         <property name="input"/>
                         <property name="output"/>
                         <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
                         </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[735.0, 335.0]">
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[735.0, 340.0]">
                         </property>
                         <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                         </property>
@@ -457,7 +445,7 @@
                         <property name="input"/>
                         <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
                         </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 375.0]">
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 335.0]">
                         </property>
                     </port>
                     <entity name="idle" class="ptolemy.domains.modal.kernel.State">
@@ -467,7 +455,7 @@
                         </property>
                         <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                         </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[265.0, 370.0]">
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[264.4068755071831, 323.87165435669704]">
                         </property>
                     </entity>
                     <entity name="receiving" class="ptolemy.domains.modal.kernel.State">
@@ -475,7 +463,7 @@
                         </property>
                         <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                         </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[495.0, 415.0]">
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[494.4068755071831, 368.87165435669704]">
                         </property>
                     </entity>
                     <entity name="receiveDone" class="ptolemy.domains.modal.kernel.State">
@@ -483,15 +471,15 @@
                         </property>
                         <property name="_controllerFactory" class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
                         </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[435.0, 245.0]">
+                        <property name="_location" class="ptolemy.kernel.util.Location" value="[434.4068755071831, 198.87165435669704]">
                         </property>
                     </entity>
                     <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
                         <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="fromChannel_isPresent">
                         </property>
-                        <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="startOfFrame=true; setTimer = timerValue">
+                        <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="startOfFrame=true">
                         </property>
-                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="payload = fromChannel">
+                        <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="payload = fromChannel; timer = timerValue">
                         </property>
                         <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6614019052961146">
                         </property>
@@ -499,15 +487,15 @@
                         </property>
                     </relation>
                     <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
-                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="timer_isPresent">
+                        <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute" value="timeout(timer)">
                         </property>
                         <property name="outputActions" class="ptolemy.domains.modal.kernel.OutputActionsAttribute" value="endOfFrame = true; toMAC = payload">
                         </property>
                         <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute" value="payload = 0">
                         </property>
-                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                        <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="1.0207283337963708">
                         </property>
-                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.883254486289492">
+                        <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.647581656052464">
                         </property>
                     </relation>
                     <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
@@ -544,15 +532,7 @@
                     <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                     </property>
                 </relation>
-                <relation name="setTimerRelation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
                 <relation name="timerValueRelation" class="ptolemy.actor.TypedIORelation">
-                    <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
-                    </property>
-                </relation>
-                <relation name="timerRelation" class="ptolemy.actor.TypedIORelation">
                     <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
                     </property>
                 </relation>
@@ -570,23 +550,19 @@
                 </relation>
                 <link port="startOfFrame" relation="startOfFrameRelation"/>
                 <link port="fromChannel" relation="fromChannelRelation"/>
-                <link port="setTimer" relation="setTimerRelation"/>
                 <link port="timerValue" relation="timerValueRelation"/>
-                <link port="timer" relation="timerRelation"/>
                 <link port="endOfFrame" relation="endOfFrameRelation"/>
                 <link port="toMAC" relation="toMACRelation"/>
                 <link port="radioOn" relation="radioOnRelation"/>
                 <link port="_Controller.startOfFrame" relation="startOfFrameRelation"/>
                 <link port="_Controller.fromChannel" relation="fromChannelRelation"/>
-                <link port="_Controller.setTimer" relation="setTimerRelation"/>
                 <link port="_Controller.timerValue" relation="timerValueRelation"/>
-                <link port="_Controller.timer" relation="timerRelation"/>
                 <link port="_Controller.endOfFrame" relation="endOfFrameRelation"/>
                 <link port="_Controller.toMAC" relation="toMACRelation"/>
                 <link port="_Controller.radioOn" relation="radioOnRelation"/>
             </entity>
             <entity name="RecordDisassembler" class="ptolemy.actor.lib.RecordDisassembler">
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{95.0, 260.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{95.0, 240.0}">
                 </property>
                 <port name="payload" class="ptolemy.actor.TypedIOPort">
                     <property name="output"/>
@@ -599,52 +575,28 @@
                     </property>
                 </port>
             </entity>
-            <entity name="MicrostepDelay" class="ptolemy.actor.lib.MicrostepDelay">
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{495.0, 80.0}">
-                </property>
-                <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="true">
-                </property>
-            </entity>
-            <entity name="ResettableTimer" class="ptolemy.actor.lib.ResettableTimer">
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{620.0, 80.0}">
-                </property>
-                <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="true">
-                </property>
-            </entity>
             <relation name="relation4" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.timerValue&quot;,x=335.0,y=290.0}, tail={id=&quot;RecordDisassembler.length&quot;,x=95.0,y=260.0}, points={240.0,280.0,240.0,290.0} } }">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.timerValue&quot;,x=320.0,y=260.0}, tail={id=&quot;RecordDisassembler.length&quot;,x=95.0,y=240.0}, points={225.0,260.0,225.0,270.0} } }">
                 </property>
             </relation>
             <relation name="relation2" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;fromChannel._location&quot;,x=15.0,y=280.0}, tail={id=&quot;RecordDisassembler.input&quot;,x=95.0,y=260.0}, points={} } }">
-                </property>
-            </relation>
-            <relation name="relation9" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.timer&quot;,x=335.0,y=290.0}, tail={id=&quot;MicrostepDelay.output&quot;,x=495.0,y=80.0}, points={225.0,300.0,225.0,80.0} } }">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;fromChannel._location&quot;,x=15.0,y=260.0}, tail={id=&quot;RecordDisassembler.input&quot;,x=95.0,y=240.0}, points={} } }">
                 </property>
             </relation>
             <relation name="relation11" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;startOfFrame._location&quot;,x=485.0,y=140.0}, tail={id=&quot;ModalModel.startOfFrame&quot;,x=335.0,y=290.0}, points={430.0,140.0,430.0,270.0} } }">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;startOfFrame._location&quot;,x=455.0,y=135.0}, tail={id=&quot;ModalModel.startOfFrame&quot;,x=320.0,y=260.0}, points={415.0,135.0,415.0,250.0} } }">
                 </property>
             </relation>
             <relation name="relation12" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;endOfFrame._location&quot;,x=485.0,y=215.0}, tail={id=&quot;ModalModel.endOfFrame&quot;,x=335.0,y=290.0}, points={460.0,215.0,460.0,300.0} } }">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;endOfFrame._location&quot;,x=455.0,y=195.0}, tail={id=&quot;ModalModel.endOfFrame&quot;,x=320.0,y=260.0}, points={430.0,195.0,430.0,260.0} } }">
                 </property>
             </relation>
             <relation name="relation13" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;toMAC._location&quot;,x=485.0,y=310.0}, tail={id=&quot;ModalModel.toMAC&quot;,x=335.0,y=290.0}, points={} } }">
-                </property>
-            </relation>
-            <relation name="relation8" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;MicrostepDelay.input&quot;,x=495.0,y=80.0}, tail={id=&quot;ResettableTimer.output&quot;,x=620.0,y=80.0}, points={} } }">
-                </property>
-            </relation>
-            <relation name="relation10" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.setTimer&quot;,x=335.0,y=290.0}, tail={id=&quot;ResettableTimer.input&quot;,x=620.0,y=80.0}, points={445.0,280.0,445.0,175.0,700.0,175.0,700.0,80.0} } }">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;toMAC._location&quot;,x=455.0,y=270.0}, tail={id=&quot;ModalModel.toMAC&quot;,x=320.0,y=260.0}, points={} } }">
                 </property>
             </relation>
             <relation name="relation" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.fromChannel&quot;,x=335.0,y=290.0}, tail={id=&quot;RecordDisassembler.payload&quot;,x=95.0,y=260.0}, points={} } }">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.fromChannel&quot;,x=320.0,y=260.0}, tail={id=&quot;RecordDisassembler.payload&quot;,x=95.0,y=240.0}, points={} } }">
                 </property>
             </relation>
             <link port="toMAC" relation="relation13"/>
@@ -653,18 +605,12 @@
             <link port="fromChannel" relation="relation2"/>
             <link port="ModalModel.startOfFrame" relation="relation11"/>
             <link port="ModalModel.fromChannel" relation="relation"/>
-            <link port="ModalModel.setTimer" relation="relation10"/>
             <link port="ModalModel.timerValue" relation="relation4"/>
-            <link port="ModalModel.timer" relation="relation9"/>
             <link port="ModalModel.endOfFrame" relation="relation12"/>
             <link port="ModalModel.toMAC" relation="relation13"/>
             <link port="RecordDisassembler.input" relation="relation2"/>
             <link port="RecordDisassembler.payload" relation="relation"/>
             <link port="RecordDisassembler.length" relation="relation4"/>
-            <link port="MicrostepDelay.input" relation="relation8"/>
-            <link port="MicrostepDelay.output" relation="relation9"/>
-            <link port="ResettableTimer.input" relation="relation10"/>
-            <link port="ResettableTimer.output" relation="relation8"/>
         </entity>
         <entity name="Display" class="ptolemy.actor.lib.gui.Display">
             <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={671, 587, 484, 437}, maximized=false}">
@@ -689,8 +635,6 @@
             </property>
             <port name="in" class="ptolemy.actor.TypedIOPort">
                 <property name="input"/>
-                <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                </property>
             </port>
         </entity>
         <entity name="Expression2" class="ptolemy.actor.lib.Expression">
