@@ -369,7 +369,7 @@
                 <property name="input"/>
                 <property name="defaultValue" class="ptolemy.data.expr.Parameter">
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{635.0, 15.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{635.0, 10.0}">
                 </property>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                 </property>
@@ -712,7 +712,7 @@ Then delete this annotation.</text>
                     <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
                     </property>
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{720.0, 15.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{720.0, 10.0}">
                 </property>
             </entity>
             <entity name="Expression" class="ptolemy.actor.lib.Expression">
@@ -740,7 +740,7 @@ Then delete this annotation.</text>
                     <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
                     </property>
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{550.0, 15.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{550.0, 10.0}">
                 </property>
             </entity>
             <entity name="Init" class="ptolemy.actor.lib.Const">
@@ -755,17 +755,17 @@ Then delete this annotation.</text>
                     <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
                     </property>
                 </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{470.0, 15.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{470.0, 10.0}">
                 </property>
             </entity>
             <entity name="MicrostepDelay" class="ptolemy.actor.lib.MicrostepDelay">
-                <property name="_location" class="ptolemy.kernel.util.Location" value="{480.0, 365.0}">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{480.0, 360.0}">
                 </property>
                 <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="true">
                 </property>
             </entity>
             <entity name="ResettableTimer" class="ptolemy.actor.lib.ResettableTimer">
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[595.0, 365.0]">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{605.0, 360.0}">
                 </property>
                 <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="true">
                 </property>
@@ -787,7 +787,7 @@ Then delete this annotation.</text>
                 </property>
             </relation>
             <relation name="relation5" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;radioOn._location&quot;,x=635.0,y=15.0}, tail={id=&quot;SetVariable.input&quot;,x=720.0,y=15.0}, points={} } }">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;radioOn._location&quot;,x=635.0,y=10.0}, tail={id=&quot;SetVariable.input&quot;,x=720.0,y=10.0}, points={} } }">
                 </property>
             </relation>
             <relation name="relation6" class="ptolemy.actor.TypedIORelation">
@@ -795,11 +795,11 @@ Then delete this annotation.</text>
                 </property>
             </relation>
             <relation name="relation7" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SetVariable2.input&quot;,x=550.0,y=15.0}, tail={id=&quot;Init.output&quot;,x=470.0,y=15.0}, points={} } }">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SetVariable2.input&quot;,x=550.0,y=10.0}, tail={id=&quot;Init.output&quot;,x=470.0,y=10.0}, points={} } }">
                 </property>
             </relation>
             <relation name="relation9" class="ptolemy.actor.TypedIORelation">
-                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.timer&quot;,x=335.0,y=230.0}, tail={id=&quot;MicrostepDelay.output&quot;,x=480.0,y=365.0}, points={240.0,240.0,240.0,365.0} } }">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ModalModel.timer&quot;,x=335.0,y=230.0}, tail={id=&quot;MicrostepDelay.output&quot;,x=480.0,y=360.0}, points={240.0,240.0,240.0,360.0} } }">
                 </property>
             </relation>
             <relation name="relation11" class="ptolemy.actor.TypedIORelation">
@@ -815,8 +815,12 @@ Then delete this annotation.</text>
                 </property>
             </relation>
             <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;MicrostepDelay.input&quot;,x=480.0,y=360.0}, tail={id=&quot;ResettableTimer.output&quot;,x=605.0,y=360.0}, points={} } }">
+                </property>
             </relation>
             <relation name="relation10" class="ptolemy.actor.TypedIORelation">
+                <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ResettableTimer.input&quot;,x=605.0,y=360.0}, tail={id=&quot;ModalModel.setTimer&quot;,x=335.0,y=230.0}, points={685.0,360.0,685.0,180.0,445.0,180.0,445.0,220.0} } }">
+                </property>
             </relation>
             <link port="toMAC" relation="relation13"/>
             <link port="startOfFrame" relation="relation11"/>
