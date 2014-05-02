@@ -794,15 +794,15 @@
             <link port="DoubleFormatter2.out" relation="relation7"/>
         </entity>
         <entity name="MACLayer" class="ptolemy.actor.TypedCompositeActor">
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[665.0, 285.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{665.0, 285.0}">
             </property>
             <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 808}, maximized=false}">
             </property>
-            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[2326, 1304]">
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 698]">
             </property>
             <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.8278244919035984">
             </property>
-            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{335.5400390624999, 319.2598255005937}">
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{29.164890638492977, 153.4889862640328}">
             </property>
             <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="false">
             </property>
@@ -903,6 +903,44 @@
                 <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
                 </property>
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{-165.0, -25.0}">
+                </property>
+            </property>
+            <property name="nextSlotTimer" class="ptolemy.data.expr.Parameter" value="245">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-165.0, 0.0]">
+                </property>
+            </property>
+            <property name="Parameter" class="ptolemy.data.expr.Parameter" value="">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+      <svg>
+        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+      </svg>
+    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[-15.0, 0.0]">
                 </property>
             </property>
             <port name="startOfFrame" class="ptolemy.actor.TypedIOPort">
@@ -2277,7 +2315,7 @@
                 </property>
                 <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.7515443177084717">
                 </property>
-                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{335.8103561046512, 88.66407158430232}">
+                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{268.3365007267442, 101.16883175872093}">
                 </property>
                 <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="false">
                 </property>
@@ -2595,7 +2633,7 @@
                     </property>
                 </entity>
                 <entity name="Const" class="ptolemy.actor.lib.Const">
-                    <property name="value" class="ptolemy.data.expr.Parameter" value="0">
+                    <property name="value" class="ptolemy.data.expr.Parameter" value="TsSlotDuration">
                     </property>
                     <doc>Create a constant sequence.</doc>
                     <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
@@ -2609,311 +2647,26 @@
                     <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="true">
                     </property>
                 </entity>
-                <entity name="CalculateSyncTime" class="ptolemy.actor.TypedCompositeActor">
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="{245.0, 90.0}">
+                <entity name="CurrentTime" class="ptolemy.actor.lib.CurrentTime">
+                    <doc>Output the current time.</doc>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[385.0, -40.0]">
                     </property>
-                    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={382, 148, 934, 634}, maximized=false}">
+                    <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="true">
                     </property>
-                    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
+                </entity>
+                <entity name="SetVariable2" class="ptolemy.actor.lib.SetVariable">
+                    <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="lastSlotTimer">
                     </property>
-                    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
-                    </property>
-                    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{1346.3162790697672, 244.86536155523254}">
-                    </property>
-                    <property name="nextFireTime" class="ptolemy.data.expr.Parameter" value="245">
-                        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                    <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                        <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
                         </property>
-                        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
-                            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
-                            </property>
-                        </property>
-                        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
-                            <configure>
-      <svg>
-        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
-      </svg>
-    </configure>
-                        </property>
-                        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[70.0, 245.0]">
+                        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
                         </property>
                     </property>
-                    <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{115, 165}">
-                        </property>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="{245, -35}">
                     </property>
-                    <property name="RESYNCHRONIZATIONGUARD" class="ptolemy.data.expr.Parameter" value="5">
-                        <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
-                        </property>
-                        <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
-                            <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
-                            </property>
-                        </property>
-                        <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
-                            <configure>
-      <svg>
-        <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
-      </svg>
-    </configure>
-                        </property>
-                        <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{405.7209302325582, 251.88396620639537}">
-                        </property>
+                    <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="true">
                     </property>
-                    <port name="timeCorrection" class="ptolemy.actor.TypedIOPort">
-                        <property name="input"/>
-                        <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 470.0}">
-                        </property>
-                    </port>
-                    <port name="nextFire" class="ptolemy.actor.TypedIOPort">
-                        <property name="output"/>
-                        <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{1160.0, 395.0}">
-                        </property>
-                    </port>
-                    <entity name="Expression2" class="ptolemy.actor.lib.Expression">
-                        <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="nextFireTime-(currentValue %TsSlotDuration) &lt; RESYNCHRONIZATIONGUARD">
-                        </property>
-                        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-                            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
-                            </property>
-                            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
-                            </property>
-                            <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
-                            </property>
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{470.0, 470.0}">
-                        </property>
-                        <port name="currentValue" class="ptolemy.actor.TypedIOPort">
-                            <property name="input"/>
-                            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                            </property>
-                        </port>
-                    </entity>
-                    <entity name="CurrentTime" class="ptolemy.actor.lib.CurrentTime">
-                        <doc>Output the current time.</doc>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{175.0, 470.0}">
-                        </property>
-                    </entity>
-                    <entity name="BooleanSelect" class="ptolemy.actor.lib.BooleanSelect">
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{970.0, 395.0}">
-                        </property>
-                        <port name="trueInput" class="ptolemy.actor.TypedIOPort">
-                            <property name="input"/>
-                            <property name="multiport"/>
-                            <property name="tokenConsumptionRate" class="ptolemy.data.expr.Parameter" value="0">
-                            </property>
-                        </port>
-                        <port name="falseInput" class="ptolemy.actor.TypedIOPort">
-                            <property name="input"/>
-                            <property name="multiport"/>
-                            <property name="tokenConsumptionRate" class="ptolemy.data.expr.Parameter" value="0">
-                            </property>
-                        </port>
-                        <port name="control" class="ptolemy.actor.TypedIOPort">
-                            <property name="input"/>
-                            <property name="tokenConsumptionRate" class="ptolemy.data.expr.Parameter" value="1">
-                            </property>
-                        </port>
-                    </entity>
-                    <entity name="Expression3" class="ptolemy.actor.lib.Expression">
-                        <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="2*TsSlotDuration + timeCorrection">
-                        </property>
-                        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-                            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
-                            </property>
-                            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
-                            </property>
-                            <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
-                            </property>
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{795.0, 335.0}">
-                        </property>
-                        <port name="timeCorrection" class="ptolemy.actor.TypedIOPort">
-                            <property name="input"/>
-                        </port>
-                    </entity>
-                    <entity name="Expression4" class="ptolemy.actor.lib.Expression">
-                        <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="TsSlotDuration + timeCorrection">
-                        </property>
-                        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-                            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
-                            </property>
-                            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
-                            </property>
-                            <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
-                            </property>
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{795.0, 405.0}">
-                        </property>
-                        <port name="timeCorrection" class="ptolemy.actor.TypedIOPort">
-                            <property name="input"/>
-                        </port>
-                    </entity>
-                    <entity name="SetVariable" class="ptolemy.actor.lib.SetVariable">
-                        <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="asn">
-                        </property>
-                        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-                            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
-                            </property>
-                            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
-                            </property>
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{1080.0, 205.0}">
-                        </property>
-                    </entity>
-                    <entity name="Expression5" class="ptolemy.actor.lib.Expression">
-                        <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="asn + 1">
-                        </property>
-                        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-                            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
-                            </property>
-                            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
-                            </property>
-                            <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
-                            </property>
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{870.0, 260.0}">
-                        </property>
-                    </entity>
-                    <entity name="BooleanSwitch" class="ptolemy.actor.lib.BooleanSwitch">
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{970.0, 260.0}">
-                        </property>
-                    </entity>
-                    <entity name="Discard" class="ptolemy.actor.lib.Discard">
-                        <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{1090.0, 330.0}">
-                        </property>
-                        <port name="input" class="ptolemy.actor.TypedIOPort">
-                            <property name="input"/>
-                            <property name="multiport"/>
-                            <property name="_cardinal" class="ptolemy.kernel.util.StringAttribute" value="NORTH">
-                            </property>
-                        </port>
-                    </entity>
-                    <entity name="SetVariable2" class="ptolemy.actor.lib.SetVariable">
-                        <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="nextFireTime">
-                        </property>
-                        <property name="delayed" class="ptolemy.data.expr.Parameter" value="true">
-                        </property>
-                        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-                            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
-                            </property>
-                            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
-                            </property>
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{1200.0, 335.0}">
-                        </property>
-                    </entity>
-                    <entity name="SetVariable3" class="ptolemy.actor.lib.SetVariable">
-                        <property name="variableName" class="ptolemy.kernel.util.StringAttribute" value="nextFireTime">
-                        </property>
-                        <property name="delayed" class="ptolemy.data.expr.Parameter" value="false">
-                        </property>
-                        <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-                            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="variableName">
-                            </property>
-                            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="40">
-                            </property>
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="[240.0, 295.0]">
-                        </property>
-                    </entity>
-                    <entity name="InitEvent" class="ptolemy.actor.lib.SingleEvent">
-                        <property name="value" class="ptolemy.data.expr.Parameter" value="0">
-                        </property>
-                        <property name="_location" class="ptolemy.kernel.util.Location" value="{115, 295}">
-                        </property>
-                    </entity>
-                    <relation name="relation" class="ptolemy.actor.TypedIORelation">
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression2.currentValue&quot;,x=470.0,y=470.0}, tail={id=&quot;CurrentTime.output&quot;,x=175.0,y=470.0}, points={} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation3" class="ptolemy.actor.TypedIORelation">
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;BooleanSelect.falseInput&quot;,x=2035.0,y=240.0}, tail={id=&quot;Expression3.output&quot;,x=1855.0,y=230.0,index=0}, points={800.0,100.0,800.0,155.0} },{ head={id=&quot;BooleanSelect.falseInput&quot;,x=970.0,y=395.0}, tail={id=&quot;Expression4.output&quot;,x=795.0,y=405.0}, points={} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
-                        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-                        </property>
-                        <vertex name="vertex1" value="{670.0, 405.0}">
-                        </vertex>
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression4.timeCorrection&quot;,x=1855.0,y=305.0}, tail={id=&quot;relation5.vertex1&quot;,x=2000.0,y=440.0}, points={1730.0,305.0} },{ head={id=&quot;.Expression.output&quot;,x=1225.0,y=230.0}, tail={id=&quot;relation5.vertex1&quot;,x=2000.0,y=440.0}, points={} },{ head={id=&quot;Expression3.timeCorrection&quot;,x=1855.0,y=230.0}, tail={id=&quot;relation5.vertex1&quot;,x=2000.0,y=440.0}, points={} },{ head={id=&quot;Expression4.timeCorrection&quot;,x=795.0,y=405.0}, tail={id=&quot;relation4.vertex1&quot;,x=670.0,y=405.0}, points={} },{ head={id=&quot;Expression3.timeCorrection&quot;,x=795.0,y=335.0}, tail={id=&quot;relation4.vertex1&quot;,x=670.0,y=405.0}, points={670.0,335.0} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
-                        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-                        </property>
-                        <vertex name="vertex1" value="{920.0, 470.0}">
-                        </vertex>
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;BooleanSelect.control&quot;,x=970.0,y=395.0}, tail={id=&quot;relation5.vertex1&quot;,x=920.0,y=470.0}, points={970.0,470.0} },{ head={id=&quot;BooleanSwitch.control&quot;,x=970.0,y=260.0}, tail={id=&quot;relation5.vertex1&quot;,x=920.0,y=470.0}, points={970.0,350.0,920.0,350.0} },{ head={id=&quot;Expression2.output&quot;,x=470.0,y=470.0}, tail={id=&quot;relation5.vertex1&quot;,x=920.0,y=470.0}, points={} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation6" class="ptolemy.actor.TypedIORelation">
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SetVariable.input&quot;,x=1080.0,y=205.0}, tail={id=&quot;BooleanSwitch.trueOutput&quot;,x=970.0,y=260.0}, points={1045.0,205.0,1045.0,250.0} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;BooleanSwitch.falseOutput&quot;,x=970.0,y=260.0}, tail={id=&quot;Discard.input&quot;,x=1090.0,y=330.0}, points={1090.0,270.0} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation8" class="ptolemy.actor.TypedIORelation">
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Expression5.output&quot;,x=870.0,y=260.0}, tail={id=&quot;BooleanSwitch.input&quot;,x=970.0,y=260.0}, points={} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation10" class="ptolemy.actor.TypedIORelation">
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;BooleanSelect.trueInput&quot;,x=970.0,y=395.0}, tail={id=&quot;Expression3.output&quot;,x=795.0,y=335.0}, points={935.0,385.0,935.0,335.0} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation11" class="ptolemy.actor.TypedIORelation">
-                        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-                        </property>
-                        <vertex name="vertex1" value="{110.0, 470.0}">
-                        </vertex>
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;relation11.vertex1&quot;,x=110.0,y=470.0}, tail={id=&quot;relation4.vertex1&quot;,x=670.0,y=405.0}, points={110.0,405.0} },{ head={id=&quot;timeCorrection._location&quot;,x=20.0,y=470.0}, tail={id=&quot;relation11.vertex1&quot;,x=110.0,y=470.0}, points={} },{ head={id=&quot;CurrentTime.trigger&quot;,x=175.0,y=470.0}, tail={id=&quot;relation11.vertex1&quot;,x=110.0,y=470.0}, points={} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation9" class="ptolemy.actor.TypedIORelation">
-                        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-                        </property>
-                        <vertex name="vertex1" value="{1140.0, 395.0}">
-                        </vertex>
-                        <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SetVariable2.input&quot;,x=1200.0,y=335.0}, tail={id=&quot;relation9.vertex1&quot;,x=1140.0,y=395.0}, points={1140.0,335.0} },{ head={id=&quot;nextFire._location&quot;,x=1160.0,y=395.0}, tail={id=&quot;relation9.vertex1&quot;,x=1140.0,y=395.0}, points={} },{ head={id=&quot;BooleanSelect.output&quot;,x=970.0,y=395.0}, tail={id=&quot;relation9.vertex1&quot;,x=1140.0,y=395.0}, points={} } }">
-                        </property>
-                    </relation>
-                    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
-                    </relation>
-                    <link port="timeCorrection" relation="relation11"/>
-                    <link port="nextFire" relation="relation9"/>
-                    <link port="Expression2.output" relation="relation5"/>
-                    <link port="Expression2.currentValue" relation="relation"/>
-                    <link port="CurrentTime.output" relation="relation"/>
-                    <link port="CurrentTime.trigger" relation="relation11"/>
-                    <link port="BooleanSelect.trueInput" relation="relation10"/>
-                    <link port="BooleanSelect.falseInput" relation="relation3"/>
-                    <link port="BooleanSelect.control" relation="relation5"/>
-                    <link port="BooleanSelect.output" relation="relation9"/>
-                    <link port="Expression3.output" relation="relation10"/>
-                    <link port="Expression3.timeCorrection" relation="relation4"/>
-                    <link port="Expression4.output" relation="relation3"/>
-                    <link port="Expression4.timeCorrection" relation="relation4"/>
-                    <link port="SetVariable.input" relation="relation6"/>
-                    <link port="Expression5.output" relation="relation8"/>
-                    <link port="BooleanSwitch.input" relation="relation8"/>
-                    <link port="BooleanSwitch.control" relation="relation5"/>
-                    <link port="BooleanSwitch.trueOutput" relation="relation6"/>
-                    <link port="BooleanSwitch.falseOutput" relation="relation7"/>
-                    <link port="Discard.input" relation="relation7"/>
-                    <link port="SetVariable2.input" relation="relation9"/>
-                    <link port="SetVariable3.input" relation="relation2"/>
-                    <link port="InitEvent.output" relation="relation2"/>
-                    <link relation1="relation4" relation2="relation11"/>
                 </entity>
                 <relation name="relation6" class="ptolemy.actor.TypedIORelation">
                     <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;SetVariable.input&quot;,x=1175.0,y=80.0}, tail={id=&quot;Expression2.output&quot;,x=1095.0,y=80.0}, points={} } }">
@@ -2968,12 +2721,8 @@
                     </property>
                 </relation>
                 <relation name="relation8" class="ptolemy.actor.TypedIORelation">
-                    <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;Merge.output&quot;,x=115.0,y=90.0}, tail={id=&quot;CalculateSyncTime.timeCorrection&quot;,x=245.0,y=90.0}, points={} } }">
-                    </property>
                 </relation>
                 <relation name="relation9" class="ptolemy.actor.TypedIORelation">
-                    <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;ResettableTimer.input&quot;,x=375.0,y=90.0}, tail={id=&quot;CalculateSyncTime.nextFire&quot;,x=245.0,y=90.0}, points={} } }">
-                    </property>
                 </relation>
                 <link port="cellType" relation="relation7"/>
                 <link port="adjustment" relation="relation5"/>
@@ -2992,7 +2741,7 @@
                 <link port="readFromSchedules.trigger" relation="relation17"/>
                 <link port="Expression3.output" relation="relation17"/>
                 <link port="Expression3.in" relation="relation2"/>
-                <link port="ResettableTimer.input" relation="relation9"/>
+                <link port="ResettableTimer.input" relation="relation8"/>
                 <link port="ResettableTimer.output" relation="relation3"/>
                 <link port="Merge.input" relation="relation"/>
                 <link port="Merge.input" relation="relation4"/>
@@ -3001,8 +2750,9 @@
                 <link port="SingleEvent.output" relation="relation"/>
                 <link port="Const.output" relation="relation4"/>
                 <link port="Const.trigger" relation="relation3"/>
-                <link port="CalculateSyncTime.timeCorrection" relation="relation8"/>
-                <link port="CalculateSyncTime.nextFire" relation="relation9"/>
+                <link port="CurrentTime.output" relation="relation9"/>
+                <link port="CurrentTime.trigger" relation="relation3"/>
+                <link port="SetVariable2.input" relation="relation9"/>
             </entity>
             <entity name="Display" class="ptolemy.actor.lib.gui.Display">
                 <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={716, 425, 484, 208}, maximized=false}">
