@@ -20,6 +20,8 @@
 *.mtc
 *.mtc1
 *.out
+*.bak
+*.swp
 
 *.synctex.gz
 
