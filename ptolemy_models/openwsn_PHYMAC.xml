@@ -7941,13 +7941,13 @@
                         <entity name="CalculateInStateSyncTime" class="ptolemy.actor.TypedCompositeActor">
                             <property name="_location" class="ptolemy.kernel.util.Location" value="{1005.0, 245.0}">
                             </property>
-                            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 808}, maximized=true}">
+                            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 810}, maximized=true}">
                             </property>
-                            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 698]">
+                            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 700]">
                             </property>
                             <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.6910010842067221">
                             </property>
-                            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{872.4110878661087, 636.8284518828452}">
+                            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{872.4110878661087, 638.2756276150628}">
                             </property>
                             <property name="RESYNCHRONIZATIONGUARD" class="ptolemy.data.expr.Parameter" value="5">
                                 <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -8160,6 +8160,11 @@
                                 </property>
                                 <property name="_location" class="ptolemy.kernel.util.Location" value="{955.0, 450.0}">
                                 </property>
+                                <port name="input" class="ptolemy.actor.TypedIOPort">
+                                    <property name="input"/>
+                                    <property name="_type" class="ptolemy.actor.TypeAttribute" value="int">
+                                    </property>
+                                </port>
                             </entity>
                             <entity name="Expression5" class="ptolemy.actor.lib.Expression">
                                 <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="asn + 1">
@@ -8174,6 +8179,11 @@
                                 </property>
                                 <property name="_location" class="ptolemy.kernel.util.Location" value="[750.0, 460.0]">
                                 </property>
+                                <port name="output" class="ptolemy.actor.TypedIOPort">
+                                    <property name="output"/>
+                                    <property name="_type" class="ptolemy.actor.TypeAttribute" value="int">
+                                    </property>
+                                </port>
                                 <port name="trigger" class="ptolemy.actor.TypedIOPort">
                                     <property name="input"/>
                                     <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
@@ -8542,9 +8552,14 @@
                             </property>
                             <property name="_location" class="ptolemy.kernel.util.Location" value="{665.0, 410.0}">
                             </property>
+                            <port name="input" class="ptolemy.actor.TypedIOPort">
+                                <property name="input"/>
+                                <property name="_type" class="ptolemy.actor.TypeAttribute" value="int">
+                                </property>
+                            </port>
                         </entity>
                         <entity name="Expression4" class="ptolemy.actor.lib.Expression">
-                            <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="0 + otherASN">
+                            <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="9">
                             </property>
                             <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
                                 <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
@@ -8556,6 +8571,11 @@
                             </property>
                             <property name="_location" class="ptolemy.kernel.util.Location" value="{540.0, 410.0}">
                             </property>
+                            <port name="output" class="ptolemy.actor.TypedIOPort">
+                                <property name="output"/>
+                                <property name="_type" class="ptolemy.actor.TypeAttribute" value="int">
+                                </property>
+                            </port>
                             <port name="trigger" class="ptolemy.actor.TypedIOPort">
                                 <property name="input"/>
                                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
