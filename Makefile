@@ -1,8 +1,8 @@
 PAPER_DIR = docs/paper
 all: demo
 
-paper:
-	$(MAKE) -C $(PAPER_DIR) open
+paper: 
+	cd $(PAPER_DIR) && make pdf && make open
 
 paper_clean:
 	$(MAKE) -C $(PAPER_DIR) clean
