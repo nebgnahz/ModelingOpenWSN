@@ -1,4 +1,11 @@
+PAPER_DIR = docs/paper
 all: demo
+
+paper:
+	$(MAKE) -C $(PAPER_DIR) open
+
+paper_clean:
+	$(MAKE) -C $(PAPER_DIR) clean
 
 sync:
 	rsync -r ./ galaxy:/home/benzh/repos/PtOWSN
