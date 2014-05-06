@@ -31,14 +31,14 @@ The scheduler decides node actions:
 \item If it's \texttt{RX} slot, or it's \texttt{RXTX} slot but the application doesn't have data to send, the node will enter \texttt{rx} state and listen for packets.
 \end{itemize}
 
-In \texttt{tx} and \texttt{rx} states, there is a refinement which captures the complicated state transition of the radio. For example, when the node is sending a packet, it first wait a certain time (in \texttt{TXDATAOFFSET} state), then prepares the data for radio to transmit (\texttt{TXDATAPREPARE}), and after a few other states that are used to check the radio status, etc., it finally enters \texttt{TXDATA} state and transmits the packet. Similar complexity exists for managing acknowledgement and receiving a packet. Given our space constraints, we refer the reader to our Ptolemy model for more details on state transition behavior.
+In \texttt{tx} and \texttt{rx} states, there is a refinement which captures the complicated state transition of the radio. For example, when the node is sending a packet, it first wait a certain time (in \texttt{TXDATAOFFSET} state), then prepares the data for radio to transmit (\texttt{TXDATAPREPARE}), and after a few other states that are used to check the radio status, etc., it finally enters \texttt{TXDATA} state and transmits the packet. Similar complexity exists for managing acknowledgment and receiving a packet. Given our space constraints, we refer the reader to our Ptolemy model for more details on state transition behavior.
 
 The \texttt{synchronization} state is only entered when the node is not synchronized to the rest of the network anymore. Additionally, for every received packet, the node will capture the reception time (Figure~\ref{fig:timeCorrection} {\em up}). If the packet is from a time master, it will calculate the time discrepancy and use it to adjust its synchronization (Figure~\ref{fig:timeCorrection} {\em middle}). If the packet is from a time slave, then the node will still perform a calculation and send the time correction through \texttt{ACK} packet (Figure~\ref{fig:timeCorrection} {\em down}).
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/PaperReSynchronization}
-\caption{Modelling the the resynchronization.}
+\caption{Modeling the the re-synchronization.}
 \label{fig:timeCorrection}
 \end{figure}
 
