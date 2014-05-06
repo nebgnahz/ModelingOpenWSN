@@ -232,7 +232,7 @@
             <property name="_location" class="ptolemy.kernel.util.Location" value="{85.0, 15.0}">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{350, 440}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{170, 450}">
         </property>
         <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 813}, maximized=true}">
         </property>
@@ -10969,13 +10969,13 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{255.0, 130.0}">
                     </property>
                 </property>
-                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 812}, maximized=true}">
+                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 813}, maximized=true}">
                 </property>
-                <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 702]">
+                <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 703]">
                 </property>
                 <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
                 </property>
-                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{503.4790697674419, 393.2514080668605}">
+                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{503.4790697674419, 393.7514080668605}">
                 </property>
                 <property name="voltage" class="ptolemy.data.expr.Parameter" value="3.3">
                     <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -11130,7 +11130,7 @@
                     </property>
                 </entity>
                 <entity name="Expression" class="ptolemy.actor.lib.Expression">
-                    <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="voltage * (0.001 * lastPowerValue) * ((time - lastPowerChangeTime)/32768)">
+                    <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="voltage * (0.001 * lastPowerValue) * ((globalTime - lastPowerChangeTime)/32768)">
                     </property>
                     <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
                         <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
@@ -11143,6 +11143,11 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{560.0, 385.0}">
                     </property>
                     <port name="currentValue" class="ptolemy.actor.TypedIOPort">
+                        <property name="input"/>
+                        <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                        </property>
+                    </port>
+                    <port name="globalTime" class="ptolemy.actor.TypedIOPort">
                         <property name="input"/>
                         <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
                         </property>
@@ -11301,6 +11306,13 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="[250.0, 500.0]">
                     </property>
                 </entity>
+                <entity name="CurrentTime" class="ptolemy.actor.lib.CurrentTime">
+                    <property name="useLocalTime" class="ptolemy.data.expr.Parameter" value="false">
+                    </property>
+                    <doc>Output the current time.</doc>
+                    <property name="_location" class="ptolemy.kernel.util.Location" value="[350.0, 450.0]">
+                    </property>
+                </entity>
                 <relation name="relation5" class="ptolemy.actor.TypedIORelation">
                     <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
                     </property>
@@ -11341,6 +11353,8 @@
                     <vertex name="vertex1" value="{600.0, 330.0}">
                     </vertex>
                 </relation>
+                <relation name="relation" class="ptolemy.actor.TypedIORelation">
+                </relation>
                 <link port="in" relation="relation8"/>
                 <link port="out" relation="relation4"/>
                 <link port="SingleEvent.output" relation="relation5"/>
@@ -11349,6 +11363,7 @@
                 <link port="SetVariable3.input" relation="relation5"/>
                 <link port="Expression.output" relation="relation13"/>
                 <link port="Expression.currentValue" relation="relation2"/>
+                <link port="Expression.globalTime" relation="relation"/>
                 <link port="SetVariable4.input" relation="relation5"/>
                 <link port="RecordAssembler.output" relation="relation4"/>
                 <link port="RecordAssembler.powerValue" relation="relation12"/>
@@ -11365,6 +11380,8 @@
                 <link port="MicrostepDelay.input" relation="relation8"/>
                 <link port="MicrostepDelay.output" relation="relation2"/>
                 <link port="SetVariable5.input" relation="relation2"/>
+                <link port="CurrentTime.output" relation="relation"/>
+                <link port="CurrentTime.trigger" relation="relation2"/>
             </entity>
             <relation name="relation" class="ptolemy.actor.TypedIORelation">
             </relation>
