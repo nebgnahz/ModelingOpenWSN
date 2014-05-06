@@ -3,6 +3,7 @@ DVIPDF = dvipdfm
 SPELL = aspell
 TEX = ee219d
 BIBTEX = bibtex
+TEXFILES = $(wildcard *.tex)
 SOURCES = $(wildcard *.tex) $(wildcard *.bib)
 
 default: pdf
