@@ -9,12 +9,13 @@
 \label{fig:timeCorrection}
 \end{figure}
 
+Our main goal is to verify how different schedules impact on the performance of a network. In particular we focused on two metrics. The first one is the time of first synchronization of each node in the network. This metric gives us an idea of how \emph{reactive} is the network. The second metric is the power consumption of each node in the network for a specific period of time. 
 
-We considered a simple example to prove the effectiveness of the realized model.
+\subsection{Experiment Configuration}
+\label{sec:exp_config}
 
-Our setup included a set of 10 nodes with limited transmission power. Using the Wireless director, we configured each node to be able to communicate only with the previous and the successive node in the chain.
-We analyzed how the time synchronization of the network.
-\ben{To Be added later}.
+In all the experiments, nodes are organized to form a chain topology. With this topology, each node can communicate only with the two neighbors that are closer to it. To realize this short-distance communication, we use the Ptolemy \emph{Wireless Director} with a \emph{limited range} channel model.
+We consider three different schedules. The first one, which has a 4 timeslots period \footnote{Each timeslot has a duration of 15ms}, is \{\texttt{ADV}, \texttt{TX}, \texttt{RX}, \texttt{OFF}\}, following the follo
 
 %%% Local Variables: 
 %%% mode: latex
