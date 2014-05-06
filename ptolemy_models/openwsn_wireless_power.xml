@@ -4,13 +4,13 @@
 <entity name="openwsn_wireless_power" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="10.0.devel">
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 813}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1200, 1894}, maximized=false}">
     </property>
-    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 703]">
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[966, 1784]">
     </property>
     <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.6415217255605179">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{527.8990306909534, 443.12139361837615}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{340.8437912208447, 1285.6493680649905}">
     </property>
     <property name="NodeId" class="ptolemy.data.expr.Parameter" value="1">
     </property>
@@ -25,13 +25,9 @@
     <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="true">
     </property>
     <property name="WirelessDirector" class="ptolemy.domains.wireless.kernel.WirelessDirector">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{360, 125}">
+        <property name="stopTime" class="ptolemy.data.expr.Parameter" value="640000.0">
         </property>
-    </property>
-    <property name="Annotation5" class="ptolemy.vergil.kernel.attributes.TextAttribute">
-        <property name="text" class="ptolemy.kernel.util.StringAttribute" value="{&quot;ADV&quot;, &quot;TX&quot;, &quot;OFF&quot;, &quot;RX&quot;}">
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.RelativeLocation" value="[230.0, 350.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[360.0, 125.0]">
         </property>
     </property>
     <entity name="LinkVisualizer" class="ptolemy.domains.wireless.lib.LinkVisualizer">
@@ -232,15 +228,15 @@
             <property name="_location" class="ptolemy.kernel.util.Location" value="{85.0, 15.0}">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{170, 450}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-235.0, 670.0]">
         </property>
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 813}, maximized=true}">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 969, 1200, 947}, maximized=true}">
         </property>
-        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 702]">
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[966, 837]">
         </property>
         <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.7129629629629629">
         </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{835.7532467532473, 229.29870129870125}">
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{667.4415584415591, 323.9740259740259}">
         </property>
         <property name="PORT_TsSlotDuration" class="ptolemy.data.expr.Parameter" value="491">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -1392,13 +1388,13 @@
         <entity name="MACLayer" class="ptolemy.actor.TypedCompositeActor">
             <property name="_location" class="ptolemy.kernel.util.Location" value="[745.0, 295.0]">
             </property>
-            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 813}, maximized=true}">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 969, 1200, 947}, maximized=true}">
             </property>
-            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 702]">
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[966, 837]">
             </property>
             <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.6562790324542402">
             </property>
-            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{136.91860465116304, 153.88060501453504}">
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{-45.93044897659718, 256.73319768015017}">
             </property>
             <property name="_flipPortsHorizontal" class="ptolemy.data.expr.Parameter" value="false">
             </property>
@@ -10969,13 +10965,13 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{255.0, 130.0}">
                     </property>
                 </property>
-                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 813}, maximized=true}">
+                <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 969, 1200, 947}, maximized=true}">
                 </property>
-                <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 703]">
+                <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[966, 837]">
                 </property>
                 <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
                 </property>
-                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{503.4790697674419, 393.7514080668605}">
+                <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{383.4790697674419, 460.7514080668605}">
                 </property>
                 <property name="voltage" class="ptolemy.data.expr.Parameter" value="3.3">
                     <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -11130,7 +11126,7 @@
                     </property>
                 </entity>
                 <entity name="Expression" class="ptolemy.actor.lib.Expression">
-                    <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="voltage * (0.001 * lastPowerValue) * ((globalTime - lastPowerChangeTime)/32768)">
+                    <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="voltage * (0.001 * lastPowerValue) * ((globalTime - lastPowerChangeTime)/32000)">
                     </property>
                     <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
                         <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
@@ -11240,25 +11236,6 @@
                     <doc>Output the current time.</doc>
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{1171.9767441860465, 281.381640625}">
                     </property>
-                </entity>
-                <entity name="Expression4" class="ptolemy.actor.lib.Expression">
-                    <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="((time - lastPowerChangeTime)/32768)">
-                    </property>
-                    <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-                        <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
-                        </property>
-                        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
-                        </property>
-                        <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
-                        </property>
-                    </property>
-                    <property name="_location" class="ptolemy.kernel.util.Location" value="[285.0, 615.0]">
-                    </property>
-                    <port name="currentValue" class="ptolemy.actor.TypedIOPort">
-                        <property name="input"/>
-                        <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
-                        </property>
-                    </port>
                 </entity>
                 <entity name="MicrostepDelay" class="ptolemy.actor.lib.MicrostepDelay">
                     <property name="MicrostepDelayIcon" class="ptolemy.vergil.icon.EditorIcon">
@@ -11376,7 +11353,6 @@
                 <link port="Expression3.in" relation="relation13"/>
                 <link port="CurrentTime2.output" relation="relation6"/>
                 <link port="CurrentTime2.trigger" relation="relation4"/>
-                <link port="Expression4.currentValue" relation="relation2"/>
                 <link port="MicrostepDelay.input" relation="relation8"/>
                 <link port="MicrostepDelay.output" relation="relation2"/>
                 <link port="SetVariable5.input" relation="relation2"/>
