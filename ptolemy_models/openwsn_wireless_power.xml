@@ -4,13 +4,13 @@
 <entity name="openwsn_wireless_power" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="10.0.devel">
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 812}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 2560, 1414}, maximized=false}">
     </property>
-    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1206, 702]">
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[2326, 1304]">
     </property>
     <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.6415217255605179">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{527.8990306909534, 442.34199678725093}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{1400.8234815514604, 911.5388891247734}">
     </property>
     <property name="NodeId" class="ptolemy.data.expr.Parameter" value="1">
     </property>
@@ -43,12 +43,12 @@
         </property>
     </entity>
     <entity name="channel" class="ptolemy.domains.wireless.lib.LimitedRangeChannel">
-        <property name="defaultProperties" class="ptolemy.data.expr.Parameter" value="{range = Infinity}">
+        <property name="defaultProperties" class="ptolemy.data.expr.Parameter" value="{range = 200}">
         </property>
         <property name="_location" class="ptolemy.kernel.util.Location" value="[375.0, 180.0]">
         </property>
     </entity>
-    <entity name="sender0" class="ptolemy.domains.wireless.kernel.WirelessComposite">
+    <entity name="root" class="ptolemy.domains.wireless.kernel.WirelessComposite">
         <property name="DEDirector" class="ptolemy.domains.de.kernel.DEDirector">
             <property name="localClock" class="ptolemy.actor.LocalClock">
                 <property name="globalTimeResolution" class="ptolemy.actor.parameters.SharedParameter" value="1.0/32768">
@@ -59,7 +59,7 @@
             <property name="_location" class="ptolemy.kernel.util.Location" value="{85.0, 15.0}">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{300.0, 425.0}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[365.0, 425.0]">
         </property>
         <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 1440, 813}, maximized=true}">
         </property>
@@ -67,7 +67,7 @@
         </property>
         <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.7129629629629629">
         </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{835.7532467532468, 229.99999999999994}">
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{835.753246753247, 229.99999999999994}">
         </property>
         <property name="PORT_TsSlotDuration" class="ptolemy.data.expr.Parameter" value="491">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -86,6 +86,8 @@
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="{640.0, 45.0}">
+            </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
             </property>
         </property>
         <property name="PORT_maxRxDataPrepare" class="ptolemy.data.expr.Parameter" value="33">
@@ -106,6 +108,8 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="{640.0, 60.0}">
             </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
+            </property>
         </property>
         <property name="PORT_maxRxAckPrepare" class="ptolemy.data.expr.Parameter" value="10">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -124,6 +128,8 @@
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[845.0, 55.0]">
+            </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
             </property>
         </property>
         <property name="PORT_maxTxDataPrepare" class="ptolemy.data.expr.Parameter" value="66">
@@ -144,6 +150,8 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="{640.0, 75.0}">
             </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
+            </property>
         </property>
         <property name="PORT_delayRx" class="ptolemy.data.expr.Parameter" value="0">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -162,6 +170,8 @@
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="{640.0, 30.0}">
+            </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
             </property>
         </property>
         <property name="PORT_delayTx" class="ptolemy.data.expr.Parameter" value="0">
@@ -182,6 +192,8 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="{640.0, 15.0}">
             </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
+            </property>
         </property>
         <property name="PORT_maxTxAckPrepare" class="ptolemy.data.expr.Parameter" value="22">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -200,6 +212,8 @@
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[845.0, 75.0]">
+            </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
             </property>
         </property>
         <property name="nominalClockFrequency" class="ptolemy.data.expr.Parameter" value="1/32000">
@@ -221,7 +235,7 @@
             <property name="_location" class="ptolemy.kernel.util.Location" value="{170.0, 30.0}">
             </property>
         </property>
-        <property name="drift" class="ptolemy.data.expr.Parameter" value="1.0E-5">
+        <property name="drift" class="ptolemy.data.expr.Parameter" value="3.262203123172402E-6">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
             </property>
             <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -292,7 +306,7 @@
             <property name="_location" class="ptolemy.kernel.util.Location" value="[170.0, 85.0]">
             </property>
         </property>
-        <property name="schedule" class="ptolemy.data.expr.Parameter" value="{&quot;ADV&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;,&quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;, &quot;OFF&quot;}">
+        <property name="schedule" class="ptolemy.data.expr.Parameter" value="{&quot;ADV&quot;, &quot;OFF&quot;, &quot;RX&quot;, &quot;TX&quot;}">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
             </property>
             <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -329,6 +343,8 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, -170.0]">
             </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
+            </property>
         </property>
         <property name="Annotation3" class="ptolemy.vergil.kernel.attributes.TextAttribute">
             <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Node state, based on Gina mote with 16Mhz MSP430 microcontroller and AT86RF231 radio chip.&#10;(used measured values where available, datasheet information otherwise).&#10;Values in mA.&#10;radio tx @ 0dBm">
@@ -354,6 +370,8 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, -150.0]">
             </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
+            </property>
         </property>
         <property name="radioListen" class="ptolemy.data.expr.Parameter" value="11.6">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -372,6 +390,8 @@
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, -70.0]">
+            </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
             </property>
         </property>
         <property name="radioToListen" class="ptolemy.data.expr.Parameter" value="12.3">
@@ -392,6 +412,8 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, -90.0]">
             </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
+            </property>
         </property>
         <property name="radioTx" class="ptolemy.data.expr.Parameter" value="13.7">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -410,6 +432,8 @@
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, -110.0]">
+            </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
             </property>
         </property>
         <property name="radioReady" class="ptolemy.data.expr.Parameter" value="5.4">
@@ -430,6 +454,8 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, -130.0]">
             </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
+            </property>
         </property>
         <property name="radioRx" class="ptolemy.data.expr.Parameter" value="11.6">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -448,6 +474,8 @@
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[660.0, -50.0]">
+            </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
             </property>
         </property>
         <property name="microActive" class="ptolemy.data.expr.Parameter" value="7.54">
@@ -468,6 +496,8 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[845.0, -150.0]">
             </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
+            </property>
         </property>
         <property name="microSleep" class="ptolemy.data.expr.Parameter" value="0.0011">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
@@ -487,8 +517,10 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="{845.0, -170.0}">
             </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
+            </property>
         </property>
-        <property name="totalPowerConsumption" class="ptolemy.data.expr.Parameter" value="9.010011209106444E-4">
+        <property name="totalPowerConsumption" class="ptolemy.data.expr.Parameter" value="0.0037027061765">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
             </property>
             <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -505,6 +537,8 @@
             <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[840.0, -100.0]">
+            </property>
+            <property name="style" class="ptolemy.actor.gui.style.HiddenStyle">
             </property>
         </property>
         <port name="wirelessIn" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
@@ -541,7 +575,9 @@
             </property>
             <property name="_location" class="ptolemy.kernel.util.Location" value="[1065.0, 570.0]">
             </property>
-            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="false">
+            </property>
+            <property name="_hide" class="ptolemy.data.expr.SingletonParameter" value="true">
             </property>
         </port>
         <entity name="PhysicalLayer" class="ptolemy.actor.TypedCompositeActor">
@@ -673,7 +709,7 @@
                     </property>
                     <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{424.82622644431785, 597.8519798374543}">
                     </property>
-                    <property name="timer" class="ptolemy.data.expr.Parameter" value="34">
+                    <property name="timer" class="ptolemy.data.expr.Parameter" value="33">
                         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                         </property>
                         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -1029,7 +1065,7 @@
                 <link port="TokenToJSON.output" relation="relation5"/>
             </entity>
             <entity name="Discrete TimeDelay" class="ptolemy.actor.lib.TimeDelay">
-                <property name="delay" class="ptolemy.actor.parameters.PortParameter" value="36.0">
+                <property name="delay" class="ptolemy.actor.parameters.PortParameter" value="34.0">
                 </property>
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{765.0, 285.0}">
                 </property>
@@ -1212,7 +1248,7 @@
                 <property name="_location" class="ptolemy.kernel.util.Location" value="[-115.0, -225.0]">
                 </property>
             </property>
-            <property name="asn" class="ptolemy.data.expr.Parameter" value="1095">
+            <property name="asn" class="ptolemy.data.expr.Parameter" value="25">
                 <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                 </property>
                 <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -1231,7 +1267,7 @@
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{-155.0, -260.0}">
                 </property>
             </property>
-            <property name="nextSlotTimer" class="ptolemy.data.expr.Parameter" value="537645.0">
+            <property name="nextSlotTimer" class="ptolemy.data.expr.Parameter" value="12275.0">
                 <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                 </property>
                 <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -1250,7 +1286,7 @@
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{555.0, -260.0}">
                 </property>
             </property>
-            <property name="lastSlotTimer" class="ptolemy.data.expr.Parameter" value="537154.0">
+            <property name="lastSlotTimer" class="ptolemy.data.expr.Parameter" value="11784.0">
                 <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                 </property>
                 <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -2604,7 +2640,7 @@
                         <property name="_location" class="ptolemy.kernel.util.Location" value="[-405.0, -300.0]">
                         </property>
                     </property>
-                    <property name="lastCapturedTime" class="ptolemy.data.expr.Parameter" value="537285.0">
+                    <property name="lastCapturedTime" class="ptolemy.data.expr.Parameter" value="11915.0">
                         <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                         </property>
                         <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -12203,7 +12239,7 @@
             <entity name="powerConsumptionMonitor" class="ptolemy.actor.TypedCompositeActor">
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{345, 335}">
                 </property>
-                <property name="lastPowerChangeTime" class="ptolemy.data.expr.Parameter" value="537285.0">
+                <property name="lastPowerChangeTime" class="ptolemy.data.expr.Parameter" value="12079.0">
                     <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                     </property>
                     <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -12253,7 +12289,7 @@
                     <property name="_location" class="ptolemy.kernel.util.Location" value="{55.0, 150.0}">
                     </property>
                 </property>
-                <property name="lastPowerValue" class="ptolemy.data.expr.Parameter" value="13.7011">
+                <property name="lastPowerValue" class="ptolemy.data.expr.Parameter" value="0.0013">
                     <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
                     </property>
                     <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
@@ -13036,47 +13072,16 @@
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{550.0, 160.0}">
                 </property>
             </entity>
-            <entity name="SingleEvent" class="ptolemy.actor.lib.SingleEvent">
-                <property name="time" class="ptolemy.data.expr.Parameter" value="1000.0">
-                </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[75.0, 190.0]">
-                </property>
-            </entity>
-            <entity name="Const" class="ptolemy.actor.lib.Const">
-                <property name="value" class="ptolemy.data.expr.Parameter" value="&quot;Wireless Transmission Function&quot;">
-                </property>
-                <doc>Create a constant sequence.</doc>
-                <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
-                    <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
-                    </property>
-                    <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
-                    </property>
-                </property>
-                <property name="_location" class="ptolemy.kernel.util.Location" value="[260.0, 185.0]">
-                </property>
-            </entity>
             <relation name="relation4" class="ptolemy.actor.TypedIORelation">
                 <property name="_layoutHint" class="ptolemy.vergil.basic.layout.kieler.LayoutHint" value="{ { head={id=&quot;toMAC._location&quot;,x=600.0,y=160.0}, tail={id=&quot;Merge.output&quot;,x=550.0,y=160.0}, points={} } }">
                 </property>
-            </relation>
-            <relation name="relation6" class="ptolemy.actor.TypedIORelation">
-                <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
-                </property>
-                <vertex name="vertex1" value="[400.0, 180.0]">
-                </vertex>
-            </relation>
-            <relation name="relation" class="ptolemy.actor.TypedIORelation">
             </relation>
             <relation name="relation2" class="ptolemy.actor.TypedIORelation">
             </relation>
             <link port="fromMAC" relation="relation2"/>
             <link port="toMAC" relation="relation4"/>
-            <link port="Merge.input" relation="relation6"/>
             <link port="Merge.input" relation="relation2"/>
             <link port="Merge.output" relation="relation4"/>
-            <link port="SingleEvent.output" relation="relation"/>
-            <link port="Const.output" relation="relation6"/>
-            <link port="Const.trigger" relation="relation"/>
         </entity>
         <entity name="NodeParameterAutomation" class="ptolemy.actor.TypedCompositeActor">
             <property name="_location" class="ptolemy.kernel.util.Location" value="[160.0, -90.0]">
@@ -13085,13 +13090,13 @@
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{55.0, 40.0}">
                 </property>
             </property>
-            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={253, 133, 934, 634}, maximized=false}">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 22, 2560, 1414}, maximized=false}">
             </property>
-            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 524]">
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[2326, 1304]">
             </property>
             <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
             </property>
-            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{340.0, 252.0}">
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{1153.0, 642.0}">
             </property>
             <entity name="Expression" class="ptolemy.actor.lib.Expression">
                 <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="localAddress % 3">
@@ -13106,6 +13111,13 @@
                 </property>
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{240.0, 345.0}">
                 </property>
+                <port name="trigger" class="ptolemy.actor.TypedIOPort">
+                    <property name="input"/>
+                    <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+                    </property>
+                    <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                    </property>
+                </port>
             </entity>
             <entity name="Select" class="ptolemy.actor.lib.Select">
                 <property name="_location" class="ptolemy.kernel.util.Location" value="{380.0, 180.0}">
@@ -13218,6 +13230,7 @@
                 </property>
             </relation>
             <link port="Expression.output" relation="relation"/>
+            <link port="Expression.trigger" relation="relation7"/>
             <link port="Select.input" relation="relation2"/>
             <link port="Select.input" relation="relation3"/>
             <link port="Select.input" relation="relation4"/>
@@ -13301,7 +13314,7 @@
         <link port="AppLayer.toMAC" relation="relation11"/>
     </entity>
     <entity name="powerManagement" class="ptolemy.domains.wireless.kernel.AtomicWirelessChannel">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="{600, 205}">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[555.0, 175.0]">
         </property>
     </entity>
     <entity name="powerManager" class="ptolemy.domains.wireless.kernel.WirelessComposite">
@@ -13309,9 +13322,9 @@
             <property name="_location" class="ptolemy.kernel.util.Location" value="{60.0, 35.0}">
             </property>
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[695.0, 270.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[710.0, 180.0]">
         </property>
-        <property name="modelPowerConsumption" class="ptolemy.data.expr.Parameter" value="9.010011209106444E-4">
+        <property name="modelPowerConsumption" class="ptolemy.data.expr.Parameter" value="0.0165118465752">
             <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
             </property>
             <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
