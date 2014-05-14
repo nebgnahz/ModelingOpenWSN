@@ -12,5 +12,5 @@ sync:
 demo:
 	git log | grep Demo -B 3
 
-fuck:
+debug:
 	git log | grep Edward -B 3
