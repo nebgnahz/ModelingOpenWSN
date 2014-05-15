@@ -1,0 +1,2 @@
+20140503_12.57:
+	saved a version where termination transition doesn't work. It doesn't wait the refinement to be in a final state. This happens in "tx"
