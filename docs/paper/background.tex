@@ -1,6 +1,14 @@
 \section{Background on OpenWSN}
 \label{sec:background-openwsn}
 
+
+\begin{figure*}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{figures/PaperOpenWSNNode}
+\caption{An example application of three nodes ({\em left}) and the simplified network stack ({\em right}).}
+\label{fig:OpenWSNNode}
+\end{figure*}
+
 In this section, we provide a brief overview of the OpenWSN protocol stack. Interested readers can read \cite{watteyne2012openwsn, IEEE802.15.4e} and visit OpenWSN website\footnote{https://openwsn.atlassian.net/wiki/} for more information. 
 
 {\bf Slotframe:} IEEE802.15.4e defines a {\em slotframe} structure. A slotframe is a group of temporal slots which is repeated over time. Current OpenWSN implementation uses 15ms slots. A {\em schedule} tells the node whether it should transmit, receive or sleep in a particular slot. The construction of such schedule if out of the scope of IEEE802.15.4e.

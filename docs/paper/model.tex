@@ -4,24 +4,18 @@
 
 In this section, we present our work in Ptolemy that models the MAC layer of OpenWSN\footnote{Though the model in each figure is vector graphics, you can zoom in and read the details. We strongly suggest reader to open our Ptolemy model for details. These figures are mainly for illustration purpose.}.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=1\columnwidth]{figures/PaperOpenWSNNode}
-\caption{An example application of three nodes ({\em left}) and the simplified network stack ({\em right}).}
-\label{fig:OpenWSNNode}
-\end{figure}
 
 Though our focus is on the TSCH state machine, we have also modeled a simple physical radio and abstracted the higher network layers as a single application layer (see Figure~\ref{fig:OpenWSNNode}). The interface to the Physical layer is mainly achieved with 1) \texttt{startOfFrame} and \texttt{endOfFrame} ports, which indicate the radio status; 2) \texttt{fromPhysical} and \texttt{toPhysical}ports, which convey the payload. The interface to the Application layer is through \texttt{fromMAC} and \texttt{toMAC} ports. 
 
 Inside the \texttt{MACLayer} composite actor, we have a few actors including \texttt{packetQueueManager}, \texttt{scheduler}, \texttt{PacketProcessor} and \texttt{TSCHStateMachine} (names are self explanatory). The most relevant part is the \texttt{TSCHStateMachine}, where we modeled the protocol behavior using Hierarchical Modal Models \ref{fig:TSCHSM}. It consists of five main states, which describe the node activity: \texttt{init}, \texttt{SLEEP}, \texttt{synchronization}, \texttt{tx} and \texttt{rx}. 
 
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=1\columnwidth]{figures/PaperTSCHStateMachine}
+\includegraphics[width=1\textwidth]{figures/PaperTSCHStateMachine}
 \caption{The state machine with refinements of TSCH protocol.}
 \label{fig:TSCHSM}
-\end{figure}
+\end{figure*}
 
 During the initialization phase, we reset all protocol related parameters, When in the \texttt{synchronization} refinement, the node keeps listening for \texttt{ADV} packet and performs slot synchronization and ASN synchronization. Once the synchronization is done, it goes back to \texttt{SLEEP} state.
 The scheduler decides node actions: 
