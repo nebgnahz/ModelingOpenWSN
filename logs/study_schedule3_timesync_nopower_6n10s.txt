@@ -1,0 +1,7 @@
+{sender = 1, syncTime = 0.0051249408722}
+{sender = 2, syncTime = 2.2760677938461}
+{sender = 3, syncTime = 4.5469604911804}
+{sender = 1, syncTime = 6.8177099123001}
+{sender = 4, syncTime = 6.8178530044556}
+{sender = 2, syncTime = 9.0885902662277}
+{sender = 5, syncTime = 9.0887124824524}

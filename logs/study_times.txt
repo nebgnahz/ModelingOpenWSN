@@ -1,0 +1,32 @@
+TIMES (ms)
+
+NOTE: SCHED 2 is SCHED C in graphs, SCHED 3 is SCHED B
+
+
+sched1_pow_6n10s:	1944772 
+sched2_pow_6n10s:	18256
+sched3_pow_6n10s:	56460
+sched1_pow_20n10s:	22091215	*(90921.626770 ticks in 6276779 ms)
+sched2_pow_20n10s:	58496
+sched3_pow_20n10s:	853097
+sched1_pow_50n10s:	166817593	*(11783.913940 ticks in 6143013 ms)
+sched2_pow_50n10s:	268226
+sched3_pow_50n10s:	4762622
+sched1_time_6n10s:	24257
+sched2_time_6n10s:	8587
+sched3_time_6n10s:	8850
+sched1_time_20n10s:	73237
+sched2_time_20n10s:	15648
+sched3_time_20n10s:	15661
+sched1_time_50n10s:	168982
+sched2_time_50n10s:	46426
+sched3_time_50n10s:	48030
+
+sched1_pow_6n40s:	7277772	*(833027.081665 in 4736392)
+sched2_pow_6n40s:	123537
+sched3_pow_6n40s:	265505
+
+
+
+
+
