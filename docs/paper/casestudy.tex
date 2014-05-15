@@ -8,7 +8,7 @@ We consider a multi-hop network which has a chain of OpenWSN nodes (see Figure~\
 \caption{A multi-hop OpenWSN network.}
 \label{fig:multihop}
 \end{figure*}
-Node schedules are constructed following the schema\footnote{Interestingly, we are inspired by Gustove function to came up with such a schedule so that at any given time, a node is communicating only with one of its neighbors such that there will not be hidden terminal problem if time synchronization is achieved.}:
+Node schedules are constructed following the schema:
 
 \begin{tabular}{ l | c | c | c | c | c }
   \hline                       
@@ -19,7 +19,7 @@ Node schedules are constructed following the schema\footnote{Interestingly, we a
   $3i+2$ & \texttt{ADV} & \texttt{OFF} & \texttt{TX} & \texttt{RX} & $k \times \texttt{OFF}$ \\
   \hline  
 \end{tabular}
-where $i \in \mathbb{N}$ and $k$ is specified to control the duty cycle of each node (higher $k$ indicates more \texttt{OFF} in the schedule period and thus a lower duty cycle). Intuitively, when $k$ is small, nodes can receive \texttt{ADV} packet in a relatively timely fashion. This helps especially in case of lost synchronization. However, in case of high duty cycle schedules, the price a node needs to pay is to spend more time in \texttt{TX} and \texttt{RX} states, which potentially increases the power consumption. On the other hand, if $k$ is large, nodes that have lost synchronization will have to wait longer, leading to an increased energy consumption caused by turning the radio on and listening for long periods. Schedule duty cycle tuning is a critical activity in order achieve performance while minimizing energy consumption. In this work, we leave a formal study as future work, and only focus on cases when $k = 0, 144, 306$.
+where $i \in \mathbb{N}$ and $k$ is specified to control the duty cycle of each node (higher $k$ indicates more \texttt{OFF} slots in the schedule period and thus a lower duty cycle). Intuitively, when $k$ is small, nodes can receive \texttt{ADV} packet in a relatively timely fashion. This helps especially in case of lost synchronization. However, in case of high duty cycle schedules, the price a node needs to pay is to spend more time in \texttt{TX} and \texttt{RX} states, which potentially increases the power consumption. On the other hand, if $k$ is large, nodes that have lost synchronization will have to wait longer, leading to an increased energy consumption caused by turning the radio on and listening for long periods. Schedule duty cycle tuning is a critical activity in order achieve performance while minimizing energy consumption. In this work, we leave a formal study as future work, and only focus on cases when $k = 0, 144, 306$. These values correspond to $\sim0.06$, $\sim2.5$ and $\sim5$ seconds schedule periods. 
 
 \begin{figure}[t]
 \centering
@@ -35,11 +35,37 @@ where $i \in \mathbb{N}$ and $k$ is specified to control the duty cycle of each 
 \label{fig:power_evaluation}
 \end{figure}
 
-We present the results of a network that has 6 chained nodes\footnote{The first synchronization figure was obtained with a simulation of 20 nodes. Given that the linear relationship is clear, we present the graph with 6 nodes for consistency with the power consumption results.} under the three different schedules in Figure~\ref{fig:evaluation}; and use two metrics to evaluate each schedule. The first metric is the time of first synchronization for each node in the network. This metric gives us an idea of how \emph{reactive} the network is. The second is the power consumption of each node in the network for a given period of time. This helps to evaluate the overall lifetime of network devices, which correlates to the network {\em durability}.
+We present the results of a network that has 6 chained nodes under the three different schedules in Figure~\ref{fig:time_sync} and Figure~\ref{fig:power_evaluation}. Here we use two metrics to evaluate each schedule. The first metric is the time of first synchronization for each node in the network. This metric gives us an idea of how \emph{reactive} the network is. The second is the power consumption of each node in the network. This last metric helps to evaluate, among other factors, the overall autonomy of battery-powered network devices, which correlates to the network {\em durability}.
+In our experiments we simulated a time window of 20 seconds. We used the Ptolemy \emph{Wireless Director}, a modified version of the \emph{Discrete Event Director} with some additional parameters typical of wireless scenarios.The simulated channel was an ideal one, where the packet loss probability was 0 and signals were propagated with infinite speed.
 
-Keeping looking at Figure~\ref{fig:evaluation}, on the left, we see that the first synchronization time is proportional to the relative distance of each node from the root (as the reader intuition suggests). In case of higher duty cycle, when $k$ is smaller (such as with Schedule A), each node waits for a shorter time to reach synchronization. 
+Looking at Figure~\ref{fig:time_sync}, we see that the first synchronization time is proportional to the relative distance of each node from the root (as the reader intuition suggests). In case of higher duty cycle, when $k$ is smaller (such as with Schedule A), each node waits for a shorter time to reach synchronization. 
 
-From the power consumption side (figure on the {\em right}), we have found that if the duty cycle is high ($k$ is small), then most nodes are busy in \texttt{TX} and \texttt{RX} states, leading to similar energy consumption values. When the duty cycle is low, then nodes that are farther from the root tend to stay longer in the \texttt{synchronization} state (because of the less frequent \texttt{ADV} packets), resulting in longer times with the radio in listening mode. Interestingly, schedules with a moderate duty cycle (see Schedule B), where transmissions are less frequent but not in a way to cause node de-synchronization, lead to an overall smaller amount of energy consumption. 
+On the other hand, considering the network power consumption, we have found that if the duty cycle is high ($k$ is small), then most nodes are busy in \texttt{TX} and \texttt{RX} states, leading to similar energy consumption values. When the duty cycle is low, then nodes that are farther from the root tend to stay longer in the \texttt{synchronization} state (because of the less frequent \texttt{ADV} packets), resulting in longer times with the radio in listening mode. Interestingly, schedules with a moderate duty cycle (see Schedule B), where transmissions are less frequent but not in a way to cause node de-synchronization, lead to an overall smaller amount of energy consumption. \cite{vilajosana2013realistic}
+
+\subsection{Model Scalability}
+\label{sec:scalability}
+
+To test model scalability, we performed several additional experiments considering different set-ups.
+We used two model configurations. In the first case , the model computed the power consumption estimation for each node during execution. In the second one, the power consumption estimation feature was disabled.
+For each configuration, we considered the same network characteristics and the same topology style as in section~\ref{sec:case-study}. The only difference was the number of nodes involved in the simulations. In particular, we considered chains of 6, 20 and 50 nodes.
+For all experiments, we considered a simulated time of 10 seconds.
+Experiments have been run on a 8 cores, 3.70GHz Intel(R) Xeon(R) based machine with 32GB of RAM.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.9\columnwidth]{figures/runtime}
+\caption{Model execution time for a simulation of 10 seconds with different number of nodes and different model configurations (with and without power estimation). Points marked with the \emph{*} symbol are estimated from incomplete data, after a 60 minutes execution timeout.}
+\label{fig:runtime}
+\end{figure}
+
+Figure~\ref{fig:runtime} shows results relative to the execution of the models.
+Analyzing results, the first important observation is the relevant impact of the power estimation feature of the model on the total execution time.
+On the other hand, we can see how also the choice of the schedule has an important influence on the execution time.
+Overall, considering schedules with low duty cycle (common in practical applications), we observed a reasonable execution time in computing a precise power consumption estimation even for big networks.
+Excluding the power consumption estimation feature from the model, interestingly, the model presents good execution times also in case of very high duty cycle schedules and high number of nodes in the network.
+ 
+
+
 
 %%% Local Variables: 
 %%% mode: latex
