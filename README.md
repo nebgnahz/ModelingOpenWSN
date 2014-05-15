@@ -5,7 +5,8 @@ This project is about modeling OpenWSN protocol in Ptolemy. For CS294-97 and EE2
 
 ## Get started
 1. Install Ptolemy
-2. Run models in apps
+2. Run models in `apps` (`apps/demo_sync.xml` and `apps/demo_multihop_dict_nopower.xml` are good starting point).
+
 
 ## Use this repository
 - `apps` contains a few apps include the demo we showed
