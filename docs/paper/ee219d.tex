@@ -23,7 +23,9 @@
 \thispagestyle{empty}
 
 \begin{abstract}
-In this project, we model and implement the MAC layer of OpenWSN with Ptolemy II. Our focus is on the state machine implementation of IEEE802.15.4e standard that controls the physical radio and interface with upper network layers. With such granularity, our framework is suitable for studying many interesting features of the time-slotted channel hopping protocol. We present a preliminary study of the energy consumption and time synchronization in a simple multi-hop data transmission application. 
+The emerging of the {\em Internet of Things} paradigm poses new challenges on the side of new application development. The usual and comfortable assumption of unlimited available resources is not only no longer valid, but completely reversed. Planning the distribution grade and the energy footprint of an application running on multiple low power nodes is a key factor for a successful result.
+In this project, we describe the modeling and implementation the OpenWSN MAC layer with Ptolemy II. This network layer implements the IEEE802.15.4e standard, a variant of IEEE802.15.4 in which a set of time synchronized nodes communicate each other according to a predefined schedule. 
+The result of our work is a fine grained, executable model able to provide precise information about power consumption of a network of nodes running arbitrary applications. We also provide a preliminary study of a simple multi-hop data transmission application.
 \end{abstract}
 
 \input{intro}
@@ -33,7 +35,7 @@ In this project, we model and implement the MAC layer of OpenWSN with Ptolemy II
 \input{conclusion}
 
 \bibliographystyle{abbrv}
-\bibliography{ee219d}
+{\footnotesize \bibliography{ee219d}}
 
 \input{appendix}
 

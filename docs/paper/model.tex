@@ -4,25 +4,27 @@
 
 In this section, we present the strategy we followed to implement in Ptolemy the MAC layer of OpenWSN\footnote{Though the model in each figure is vector graphics, and it is possible to zoom in and read all the details, we  suggest the reader to open the attached Ptolemy model for further information}.
 
-Our focus has been the modeling of the TSCH state machine. However, to obtain a runnable model we have also modeled a simple physical radio and abstracted the higher network layers as a single application layer. Figure~\ref{fig:OpenWSNNode} shows our stack of actors. We can see how the information flow proceed from the physical channel to the application layer and \emph{vice versa}. 
+In Figure~\ref{fig:OpenWSNNode}, on the left, a network of OpenWSN nodes is shown. We leveraged the Ptolemy multiform time to model clock drifts typical of real nodes. 
+
+In this work, our focus has been the modeling of the TSCH state machine. However, to obtain a runnable model we have also modeled a simple physical-level radio and abstracted the higher network layers as a single application layer. Figure~\ref{fig:OpenWSNNode}, on the right, shows our stack of actors. We can see how the information flow proceed from the physical channel to the application layer and \emph{vice versa}. 
 
 Taking a closer look, we defined each actor as follows:
 
-{\bf PhysicalLayer:} This actor provides the interface to and from the physical channel and the rest of the network. Ports \texttt{fromPhysical}, \texttt{toPhysical}, \texttt{fromMAC} and \texttt{toMAC} are used to exchange data both during transmission and reception.
-To simulate a realistic behavior, in which a packet needs a certain time to be received/sent, the \texttt{PhysicalLayer} actor adds delays whenever a packet needs to be forwarded in both directions. Ports \texttt{startOfFrame} and \texttt{endOfFrame} indicate to the MAC layer the beginning and the ending of a transmission/reception performed by the radio. 
+{\bf PhysicalLayer:} This actor provides the interface to and from the physical channel and the rest of the network. Ports \texttt{fromPhysical}, \texttt{toPhysical}, \texttt{fromMAC} and \texttt{toMAC} are used to exchange data during both transmission and reception.
+To simulate a realistic behavior, in which a packet needs a certain time to be received/sent, the \texttt{PhysicalLayer} actor adds delays whenever a packet needs to be forwarded in any direction. Ports \texttt{startOfFrame} and \texttt{endOfFrame} indicate to the MAC layer the beginning and the ending of a transmission/reception performed by the radio. 
 
-{\bf AppLayer:} This actor represents the application that runs in each node. From a general point of view, the definition of the node behavior is this actor's responsibility. It communicates with the MAC layer through In this work, since our focus has been the MAC layer, we haven't implemented complex application models, leaving this task as a future work. \ai {I am not really sure about this paragraph}
+{\bf AppLayer:} This actor represents the high level application running in each node. From a general point of view, the definition of the node global behavior is this actor's responsibility. It communicates with the MAC layer through ports \texttt{fromMAC} and \texttt{toMAC}. In this work we haven't implemented complex application models, leaving this task as a future work. 
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/PaperTSCHStateMachine}
-\caption{The state machine with refinements of TSCH protocol.}
+\includegraphics[width=0.8\textwidth]{figures/PaperTSCHStateMachine}
+\caption{\small The state machine with refinements of TSCH protocol. The two subfigures on the bottom-right, being vector graphics, can be easily be read zooming in or checking the attached Ptolemy model}
 \label{fig:TSCHSM}
 \end{figure*}
 
 {\bf MACLayer:} In our model, this is the most important actor. Figure~\ref{fig:TSCHSM} gives an immediate yet detailed overview of its internal structure.
-Actors \texttt{packetQueueManager} and \texttt{PacketProcessor} are used to handle packets coming from the application and the physical layers. In the first case, since the application sends packets arbitrarily, we need a queue management actor to store packets till the system is allowed to send them. In the second case, since a packet is received from the physical layer only when the MAC layer is in the reception phase, we just need an actor to extract information as the payload, the sender address, the validity of the packet, etc.
-\texttt{scheduler} actor is responsible to communicate to the TSCH state machine what is the current slot ASN and when each slot starts. In our model, according to the actual OpenWSN implementation\footref{note:openWSN}, the schedule is predefined for each node. 
+Actors \texttt{packetQueueManager} and \texttt{PacketProcessor} are used to handle packets coming from the application and physical layers. In the first case, since the application sends packets arbitrarily, we need a \emph{queue manager} actor to store packets till the system is allowed to send them. In the second case, since a packet is received from the physical layer only when the MAC layer is in the reception phase, we just need an actor to extract information as the payload, the sender address, the validity of the packet, etc.
+\texttt{scheduler} actor is responsible to communicate to the TSCH state machine what is the current slot ASN and when each slot begins. In our model, according to the actual OpenWSN implementation\footref{note:openWSN}, the schedule is predefined for each node. 
 
 The \texttt{TSCHStateMachine} is implementated as a Ptolemy \emph{modal mode actor} and consists of five main states, which describe the node activity: \texttt{init}, \texttt{SLEEP}, \texttt{synchronization}, \texttt{tx} and \texttt{rx}. 
 
@@ -42,8 +44,8 @@ In general, for every received packet (both \texttt{DATA} or \texttt{ACK} packet
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.9\columnwidth]{figures/PaperReSynchronization}
-\caption{Modeling the re-synchronization.}
+\includegraphics[width=\columnwidth]{figures/PaperReSynchronization}
+\caption{\small Modeling the re-synchronization.}
 \label{fig:timeCorrection}
 \end{figure}
 
@@ -54,7 +56,7 @@ In general, for every received packet (both \texttt{DATA} or \texttt{ACK} packet
 In \cite{vilajosana2013realistic}, authors measured power consumption values  for several radio chips and microcontrollers running the OpenWSN stack. Moreover, they annotated each state of the OpenWSN \texttt{TSCH} state machine with the correspondent state of the radio and of the microcontroller.
 Similarly, we used those radio and microcontroller states to label our \texttt{TSCH} state machine.
 For each node, at runtime, an additional actor compute the power consumption value considering the \texttt{TSCH} state machine annotations and the amount of time the MAC layer spends in each state.
-For additional details, we suggests to the reader to check the attached model and demos.
+For additional details, we suggest to the reader to check the attached model and demos.
 
 
 
