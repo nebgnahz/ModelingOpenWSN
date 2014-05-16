@@ -15,39 +15,47 @@ To simulate a realistic behavior, in which a packet needs a certain time to be r
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/PaperTSCHStateMachine}
+\includegraphics[width=0.9\textwidth]{figures/PaperTSCHStateMachine}
 \caption{The state machine with refinements of TSCH protocol.}
 \label{fig:TSCHSM}
 \end{figure*}
 
 {\bf MACLayer:} In our model, this is the most important actor. Figure~\ref{fig:TSCHSM} gives an immediate yet detailed overview of its internal structure.
-Actors \texttt{packetQueueManager} and \texttt{PacketProcessor} are used to handle packets coming from the application and the physical layers. In the first case, since the application sends packets arbitrarily, we need a queue system to store packets till the system is allowed to send them. In the second case, since a packet is received from the physical layer only when the MAC layer is in the reception phase, we just need an actor to extract information as the payload, the sender address, the validity of the packet, etc.
+Actors \texttt{packetQueueManager} and \texttt{PacketProcessor} are used to handle packets coming from the application and the physical layers. In the first case, since the application sends packets arbitrarily, we need a queue management actor to store packets till the system is allowed to send them. In the second case, since a packet is received from the physical layer only when the MAC layer is in the reception phase, we just need an actor to extract information as the payload, the sender address, the validity of the packet, etc.
 \texttt{scheduler} actor is responsible to communicate to the TSCH state machine what is the current slot ASN and when each slot starts. In our model, according to the actual OpenWSN implementation\footref{note:openWSN}, the schedule is predefined for each node. 
 
-The \texttt{TSCHStateMachine} is implementated as a Ptolemy modal mode actor and consists of five main states, which describe the node activity: \texttt{init}, \texttt{SLEEP}, \texttt{synchronization}, \texttt{tx} and \texttt{rx}. 
+The \texttt{TSCHStateMachine} is implementated as a Ptolemy \emph{modal mode actor} and consists of five main states, which describe the node activity: \texttt{init}, \texttt{SLEEP}, \texttt{synchronization}, \texttt{tx} and \texttt{rx}. 
 
 During the initialization phase, all protocol related parameters are reset. When in the \texttt{synchronization} refinement, the node keeps listening for \texttt{ADV} packet and performs slot synchronization and ASN synchronization. Once the synchronization is done, it goes back to \texttt{SLEEP} state.
 The scheduler decides node actions: 
 \begin{itemize}
-\item If the slot is \texttt{ADV} slot, then the node enters the \texttt{tx} state and sends an \texttt{ADV} packet. 
-\item If it's \texttt{TX} or \texttt{RXTX} slot and the node has data to send (there are packets queued at \texttt{packetQueueManager}), it will enter \texttt{tx} state and send the data packet. 
+\item If the current slot is an \texttt{ADV} slot, then the node enters the \texttt{tx} state and sends an \texttt{ADV} packet. 
+\item If it is a \texttt{TX} or \texttt{RXTX} slot and the node has data to send (there are packets queued at \texttt{packetQueueManager} actor), it will enter \texttt{tx} state and send the data packet. 
 \item If it's \texttt{RX} slot, or it's \texttt{RXTX} slot but the application doesn't have data to send, the node will enter \texttt{rx} state and listen for packets.
 \end{itemize}
 
-In both \texttt{tx} and \texttt{rx} states, there is a refinement which captures the complicated state transition of the radio. For example, when the node is sending a packet, it first wait a certain time (in \texttt{TXDATAOFFSET} state), then prepares the data for radio to transmit (\texttt{TXDATAPREPARE}), and after a few other states that are used to check the radio status, etc., it finally enters \texttt{TXDATA} state and transmits the packet. Similar complexity exists for managing acknowledgment and receiving a packet. Given our space constraints, we refer the reader to our Ptolemy model for more details on state transition behavior.
+In both \texttt{tx} and \texttt{rx} states, there is a refinement which captures the complicated state transitions defined by the OpenWSN MAC layer specification (see Figure~\ref{fig:TSCHSM} on the right). For example, when the node is sending a packet, the \texttt{TSCH} state machine makes a transition from \texttt{SLEEP} to \texttt{tx} and then the associate refinement is enabled. Once in the refinement, the state machine follows a certain number of steps according to precise time constraints. Some states have additional refinements that are used to perform very specific actions. These states include \texttt{TXDATA}, where a packet is actually sent through the radio, or \texttt{TXPROC}, in which the re-synchronization information is extracted from the received \texttt{ACK} packet (see Figure~\ref{fig:timeCorrection}). Given our space constraints, we refer the reader to our Ptolemy model for more details on state transition behavior.
 
-The \texttt{synchronization} state is only entered when the node is not synchronized to the rest of the network anymore. Additionally, for every received packet, the node will capture the reception time (Figure~\ref{fig:timeCorrection} {\em up}). If the packet is from a time master, it will calculate the time discrepancy and use it to adjust its synchronization (Figure~\ref{fig:timeCorrection} {\em middle}). If the packet is from a time slave, then the node will still perform a calculation and send the time correction through \texttt{ACK} packet (Figure~\ref{fig:timeCorrection} {\em down}).
+The \texttt{synchronization} state (in the high level \texttt{TSCH} state machine) is only entered when the node just joined the network or when it is not synchronized to the rest of the network anymore. 
+
+In general, for every received packet (both \texttt{DATA} or \texttt{ACK} packet), the node will always capture the reception time (Figure~\ref{fig:timeCorrection} {\em top}). If the packet is from its time master (the node contacted to join the network), it will calculate the time discrepancy and use it for its own re-synchronization (Figure~\ref{fig:timeCorrection} {\em middle}). If the packet is from a time slave, then the node will still compute the time difference and send the correction through the \texttt{ACK} packet (Figure~\ref{fig:timeCorrection} {\em down}).
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.9\columnwidth]{figures/PaperReSynchronization}
-\caption{Modeling the the re-synchronization.}
+\caption{Modeling the re-synchronization.}
 \label{fig:timeCorrection}
 \end{figure}
 
 
 \subsection{Energy Consumption Modeling}
 \label{sec:energy}
+
+In \cite{vilajosana2013realistic}, authors measured power consumption values  for several radio chips and microcontrollers running the OpenWSN stack. Moreover, they annotated each state of the OpenWSN \texttt{TSCH} state machine with the correspondent state of the radio and of the microcontroller.
+Similarly, we used those radio and microcontroller states to label our \texttt{TSCH} state machine.
+For each node, at runtime, an additional actor compute the power consumption value considering the \texttt{TSCH} state machine annotations and the amount of time the MAC layer spends in each state.
+For additional details, we suggests to the reader to check the attached model and demos.
+
 
 
 %%% Local Variables: 
