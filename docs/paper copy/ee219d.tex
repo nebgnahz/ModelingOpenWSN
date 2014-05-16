@@ -1,0 +1,45 @@
+\documentclass[9pt,twocolumn]{article} 
+\usepackage{simpleConference}
+\usepackage{subfigure}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{url,hyperref}
+\usepackage{footmisc}
+
+\renewcommand{\baselinestretch}{0.89}
+\newcommand{\hide}[1]{}
+
+\input{inputmacros}
+
+\begin{document}
+
+\title{Project PtOWSN: Modeling OpenWSN MAC Layer using Ptolemy II}
+
+\author{
+  Antonio Iannopollo, Ben Zhang\\
+  EECS, UC Berkeley\\
+  \{antonio, benzh\}@eecs.berkeley.edu
+}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+The emerging of the {\em Internet of Things} paradigm poses new challenges on the side of new application development. The usual and comfortable assumption of unlimited available resources is not only no longer valid, but completely reversed. Planning the distribution grade and the energy footprint of an application running on multiple low power nodes is a key factor for a successful result.
+In this project, we describe the modeling and implementation the OpenWSN MAC layer with Ptolemy II. This network layer implements the IEEE802.15.4e standard, a variant of IEEE802.15.4 in which a set of time synchronized nodes communicate each other according to a predefined schedule. 
+The result of our work is a fine grained, executable model able to provide precise information about power consumption of a network of nodes running arbitrary applications. We also provide a preliminary study of a simple multi-hop data transmission application.
+\end{abstract}
+
+\input{intro}
+\input{background}
+\input{model}
+\input{casestudy}
+\input{conclusion}
+
+\bibliographystyle{abbrv}
+{\footnotesize \bibliography{ee219d}}
+
+{\small \input{appendix} }
+
+\end{document}
